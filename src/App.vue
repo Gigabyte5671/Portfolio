@@ -6,9 +6,10 @@ import image from '/22832983.png';
 <script lang="ts">
 import { defineComponent } from 'vue';
 import ServiceCard from '@/components/ServiceCard.vue';
+import WorkItem from '@/components/WorkItem.vue';
 export default defineComponent({
     name: "App",
-    components: { ServiceCard }
+    components: { ServiceCard, WorkItem }
 })
 </script>
 
@@ -31,6 +32,8 @@ export default defineComponent({
             <div class="section_divider">
                 <h1>WORKS</h1>
             </div>
+            <div class="inner">
+            </div>
 		</section>
 		<section id="services">
             <div class="section_divider">
@@ -48,6 +51,9 @@ export default defineComponent({
 		<section id="contact">
             <div class="section_divider">
                 <h1>CONTACT ME</h1>
+            </div>
+            <div class="inner">
+
             </div>
 		</section>
 	</main>
@@ -117,7 +123,7 @@ main > section{
 }
 
 main > section > .inner{
-    padding: var(--top-padding) var(--side-padding);
+    padding: calc(var(--top-padding) * 10) var(--side-padding);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -174,9 +180,6 @@ main > section > .inner{
     background-image: linear-gradient(to right, #ffd2f2, #e2eab2);
 }
 
-#services > .inner{
-    padding: calc(var(--top-padding) * 3) 0px;
-}
 
 #services .services_container{
     width: max(50%, 290px);
