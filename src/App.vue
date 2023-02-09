@@ -1,8 +1,3 @@
-<script setup lang="ts">
-//@ts-expect-error: IT IS IMAGE
-import image from '/22832983.png';
-</script>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 import ServiceCard from '@/components/ServiceCard.vue';
@@ -14,18 +9,15 @@ export default defineComponent({
 </script>
 
 <template>
-    <nav>
-        <a href="#works" class="nav_shortcut">works</a>
-        <a href="#services" class="nav_shortcut">Services</a>
-        <a href="#contact" class="nav_shortcut">Contact</a>
-    </nav>
-	<main>
+    <main>
+        <nav>
+            <a href="#works" class="nav_shortcut">Works</a>
+            <a href="#services" class="nav_shortcut">Services</a>
+            <a href="#about" class="nav_shortcut">About</a>
+        </nav>
         <section id="intro">
             <div class="inner">
-                <img :src="image" alt="" width="300" height="300">
-                <div class="info_para">
-                    <h1>Hi! I'm Zak</h1>
-                </div>
+                
             </div>
 		</section>
 		<section id="works">
@@ -48,12 +40,20 @@ export default defineComponent({
                 </div>
             </div>
 		</section>
-		<section id="contact">
+		<section id="about">
             <div class="section_divider">
-                <h1>CONTACT ME</h1>
+                <h1>ABOUT</h1>
             </div>
             <div class="inner">
-
+                <div>
+                    <img src="/22832983.png" alt="" width="300" height="300" style="border-radius: 150px;">
+                    <a href="https://github.com/Gigabyte5671">
+                        <img src="/github_logo.svg" alt="Github" width="100">
+                    </a>
+                    <a href="https://www.linkedin.com/in/zakmanley/">
+                        <img src="/linkedin_logo.png" alt="LinkedIn" width="100">
+                    </a>
+                </div>
             </div>
 		</section>
 	</main>
@@ -79,9 +79,9 @@ main{
 }
 
 nav{
-    position: fixed;
-    top: 0px;
-    right: 17px;
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
 	display: flex;
 	justify-content: flex-end;
@@ -91,6 +91,7 @@ nav{
 	gap: 1.5em;
     z-index: 10;
     background-color: white;
+    border-bottom: 1px solid black;
 }
 
 .nav_shortcut{
@@ -147,21 +148,7 @@ main > section > .inner{
 #intro{
 	display: flex;
     gap: 50px;
-    padding-top: calc(var(--top-padding) * 2 + 1.3em);
     background-image: linear-gradient(to right, #d2d2ff, #b2eae0);
-}
-
-#intro img{
-	border-radius: 30px;
-}
-
-.info_para{
-	min-width: 380px;
-	width: calc(100% - 300px - 50px);
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
-    color: var(--text-color);
 }
 
 /****************************************************************************
@@ -194,28 +181,11 @@ main > section > .inner{
 }
 
 /****************************************************************************
-********************************** CONTACT **********************************
+********************************** ABOUT **********************************
 *****************************************************************************/
 
-#contact{
+#about{
     background-image: linear-gradient(to left, #e0d2ff, #b2ddea);
 }
-
-
-
-
-@media screen and (max-width: 767px){
-	#intro > .inner{
-		justify-content: center;
-	}
-	.info_para{
-		width: 100%;
-		min-width: 300px;
-	}
-    nav{
-        font-size: 1em;
-    }
-}
-
 
 </style>
