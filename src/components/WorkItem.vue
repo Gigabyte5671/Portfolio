@@ -15,9 +15,9 @@ export default defineComponent({
             type: String,
             default: '/'
         },
-        clickable: {
+        notClickable: {
             type: Boolean,
-            default: true
+            default: false
         },
         inProgress: {
             type: Boolean,
@@ -36,7 +36,8 @@ export default defineComponent({
 </script>
 
 <template>
-	<a :class="{work_item_card: true, work_coming_soon: inProgress, work_card_click: clickable}" :href="link">
+	<a :class="{work_item_card: true, work_coming_soon: inProgress, work_card_no_click: notClickable}" :href="link">
+        <div class="background" :style="{ backgroundImage: `url(${image})` }"></div>
         <div class="work_card_details">
             <div class="work_item_top_section">
                 <h2>{{ name }}</h2>
@@ -45,7 +46,7 @@ export default defineComponent({
             <p>{{ description }}</p>
         </div>
         <div v-if="image != ''" :class="{white_image: whiteImage, work_image_outer: true}">
-            <img :src="image" width="65" height="65" >
+            <img :src="image" width="65">
         </div>
     </a>
 </template>
@@ -55,7 +56,6 @@ export default defineComponent({
     min-width: 200px;
     width: fit-content;
     padding: 35px;
-    border: 1px solid;
     border-radius: 15px;
     background-color: white;
     display: flex;
@@ -65,7 +65,20 @@ export default defineComponent({
     overflow-y: hidden;
     text-decoration: none;
     color: black;
-    pointer-events: none;
+    pointer-events: all;
+    box-shadow: 0 3px 30px -10px #0004;
+}
+
+.work_item_card > .background {
+    position: absolute;
+    inset: 0;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: 150% 50%;
+    background-size: 80%;
+    opacity: 0.07;
+
+    display: none;
 }
 
 .work_card_details{
@@ -77,6 +90,7 @@ export default defineComponent({
 .work_item_top_section{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -96,7 +110,6 @@ export default defineComponent({
     content: "";
     width: 100%;
     height: 8px;
-    z-index: 100;
     left: 0;
     background: repeating-linear-gradient(-45deg, transparent, transparent 10px, #0004 10px, #0004 20px);
 }
@@ -107,12 +120,11 @@ export default defineComponent({
     bottom: 0;
 }
 
-.work_card_click{
-    pointer-events: all;
+.work_card_no_click{
+    pointer-events: none;
 }
 
 .work_image_outer{
-    border: 1px solid;
     border-radius: 50px;
     padding: 5px;
     width: 80px;
@@ -121,9 +133,10 @@ export default defineComponent({
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .white_image{
-    background-color: black;
+    background-color: #2d2d2d;
 }
 </style>
