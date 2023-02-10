@@ -4,12 +4,46 @@ import ServiceCard from '@/components/ServiceCard.vue';
 import WorkItem from '@/components/WorkItem.vue';
 export default defineComponent({
     name: "App",
-    components: { ServiceCard, WorkItem }
+    components: { ServiceCard, WorkItem },
+    data() {
+        return {
+            transparentNav: true
+        }
+    },
+    methods: {
+        navBackgroundTransition(): void {
+            // Observer options.
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0
+            }
+
+            // Create the observer function.
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        return this.transparentNav = false;
+                    }
+                    this.transparentNav = true;
+                });
+            }, options);
+
+            // Bind to the observation target.
+            const target = document.querySelector('#works > .inner');
+            if (target) {
+                observer.observe(target);
+            }
+        }
+    },
+    mounted() {
+        this.navBackgroundTransition();
+    }
 })
 </script>
 
 <template>
-    <nav>
+    <nav :class="{ transparent: transparentNav }">
         <a href="#works" class="nav_shortcut"><p>Works</p><span class="material-symbols-rounded">brush</span></a>
         <a href="#services" class="nav_shortcut"><p>Services</p><span class="material-symbols-rounded">home_repair_service</span></a>
         <a href="#contact" class="nav_shortcut"><p>Contact</p><span class="material-symbols-rounded">send</span></a>
@@ -156,10 +190,16 @@ nav{
 	justify-content: flex-end;
 	text-transform: uppercase;
 	padding: 0.3rem 2ch;
-	gap: 1.5em;
+	gap: 3ch;
     z-index: 10;
     background-color: white;
     box-shadow: 0 0 20px -4px #0004;
+    transition: 0.2s ease background-color, 0.2s ease box-shadow;
+}
+
+nav.transparent{
+    background-color: transparent;
+    box-shadow: 0 0 20px -4px #0000;
 }
 
 .nav_shortcut{
