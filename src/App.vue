@@ -27,15 +27,21 @@ export default defineComponent({
             <div class="inner">
                 <WorkItem name="DashBooks Website" description="A website for an upcoming project" link="https://dashbooks.app/" image="https://dashbooks.app/assets/logo.aa87dd82.svg" :inProgress="true"/>
 
-                <WorkItem name="CSS Canvas" description="Create amazing CSS components, without any markup!" link="https://gigabyte5671.github.io/CSS-Canvas/" image="https://gigabyte5671.github.io/CSS-Canvas/assets/logo-small.3797bbd8.webp"/>
+                <WorkItem name="Vircadia Website" description="The website for Vircadia" link="https://vircadia.com/" image="https://raw.githubusercontent.com/vircadia/vircadia-web/master/public/assets/vircadia-icon.svg"/>
 
-                <WorkItem name="Variable Listener" description="Variable Listener is a library enabling client-side JavaScript to execute arbitrary functions when the value of any global variable changes." link="https://github.com/Gigabyte5671/VariableListener"/>
+                <WorkItem name="CSS Canvas" description="Create amazing CSS components, without any markup!" link="https://gigabyte5671.github.io/CSS-Canvas/" image="https://gigabyte5671.github.io/CSS-Canvas/assets/logo-small.3797bbd8.webp"/>
                 
                 <WorkItem name="Auto Type" description="A simple auto-typing/typewriter effect written in vanilla JS." link="https://gigabyte5671.github.io/AutoType/" image="https://gigabyte5671.github.io/AutoType/favicon.svg" :whiteImage="true"/>
 
                 <WorkItem name="DOM Particles" description="A simple particle engine that uses vanilla JavaScript to run within the native HTML DOM." link="https://gigabyte5671.github.io/DOM-Particles/" image="https://gigabyte5671.github.io/DOM-Particles/favicon.webp"/>
 
                 <WorkItem name="Wilderzone API" description="A Node JS API to retreive and return the current number of players in the Tribes Ascend game." link="https://api.wilderzone.live/" image="https://raw.githubusercontent.com/wilderzone/ta-network-api/main/logo.svg"/>
+
+                <WorkItem name="Wilderzone Live" description="The hub for all things Tribes: Ascend." link="https://wilderzone.live/" image="https://raw.githubusercontent.com/wilderzone/wilderzone-live/vue/src/assets/branding/Logo-Light.svg"/>
+
+                <WorkItem name="Wilderzone Org" description="Base repo for the Tribes Ascend Community Hub's Wilderzone.org restoration project." link="https://wilderzone.org/" image="https://github.com/wilderzone/wilderzone-live/blob/main/assets/images/wilderzone_logo_symbol_black_small.png?raw=true" :inProgress="true"/>
+
+                <WorkItem name="Cookie Manager" description="An incredibly simple and lightweight library for adding, fetching, modifying, and removing browser cookies." link="https://gigabyte5671.github.io/CookieManager/" image="https://img.icons8.com/color/96/000000/cookies.png"/>
             </div>
 		</section>
 		<section id="services">
