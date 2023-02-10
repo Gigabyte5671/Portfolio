@@ -26,6 +26,10 @@ export default defineComponent({
         image: {
             type: String,
             default: ''
+        },
+        whiteImage: {
+            type: Boolean,
+            default: false
         }
     }
 })
@@ -40,8 +44,8 @@ export default defineComponent({
             </div>
             <p>{{ description }}</p>
         </div>
-        <div v-if="image != ''" class="work_image_outer">
-            <img :src="image" width="65" height="65">
+        <div v-if="image != ''" :class="{white_image: whiteImage, work_image_outer: true}">
+            <img :src="image" width="65" height="65" >
         </div>
     </a>
 </template>
@@ -116,5 +120,10 @@ export default defineComponent({
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.white_image{
+    background-color: black;
 }
 </style>

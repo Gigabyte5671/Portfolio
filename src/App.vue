@@ -13,7 +13,7 @@ export default defineComponent({
         <nav>
             <a href="#works" class="nav_shortcut">Works</a>
             <a href="#services" class="nav_shortcut">Services</a>
-            <a href="#about" class="nav_shortcut">About</a>
+            <a href="#contact" class="nav_shortcut">Contact</a>
         </nav>
         <section id="intro">
             <div class="inner">
@@ -25,6 +25,17 @@ export default defineComponent({
                 <h1>WORKS</h1>
             </div>
             <div class="inner">
+                <WorkItem name="DashBooks Website" description="A website for an upcoming project" link="https://dashbooks.app/" image="https://dashbooks.app/assets/logo.aa87dd82.svg" :inProgress="true"/>
+
+                <WorkItem name="CSS Canvas" description="Create amazing CSS components, without any markup!" link="https://gigabyte5671.github.io/CSS-Canvas/" image="https://gigabyte5671.github.io/CSS-Canvas/assets/logo-small.3797bbd8.webp"/>
+
+                <WorkItem name="Variable Listener" description="Variable Listener is a library enabling client-side JavaScript to execute arbitrary functions when the value of any global variable changes." link="https://github.com/Gigabyte5671/VariableListener"/>
+                
+                <WorkItem name="Auto Type" description="A simple auto-typing/typewriter effect written in vanilla JS." link="https://gigabyte5671.github.io/AutoType/" image="https://gigabyte5671.github.io/AutoType/favicon.svg" :whiteImage="true"/>
+
+                <WorkItem name="DOM Particles" description="A simple particle engine that uses vanilla JavaScript to run within the native HTML DOM." link="https://gigabyte5671.github.io/DOM-Particles/" image="https://gigabyte5671.github.io/DOM-Particles/favicon.webp"/>
+
+                <WorkItem name="Wilderzone API" description="A Node JS API to retreive and return the current number of players in the Tribes Ascend game." link="https://api.wilderzone.live/" image="https://raw.githubusercontent.com/wilderzone/ta-network-api/main/logo.svg"/>
             </div>
 		</section>
 		<section id="services">
@@ -40,13 +51,14 @@ export default defineComponent({
                 </div>
             </div>
 		</section>
-		<section id="about">
+		<section id="contact">
             <div class="section_divider">
-                <h1>ABOUT</h1>
+                <h1>CONTACT</h1>
             </div>
             <div class="inner">
                 <div>
                     <img src="/22832983.png" alt="" width="300" height="300" style="border-radius: 150px;">
+                    <p>Email: contact@zakweb.dev</p>
                     <a href="https://github.com/Gigabyte5671">
                         <img src="/github_logo.svg" alt="Github" width="100">
                     </a>
@@ -148,15 +160,16 @@ main > section > .inner{
 #intro{
 	display: flex;
     gap: 50px;
-    background-image: linear-gradient(to right, #d2d2ff, #b2eae0);
+    background-image: linear-gradient(#BDF3FF, #BDD2FF);
+    /* min-height: calc(100% - (var(--top-padding) * 2 + 1.45em));
+    height: 100%; */
 }
 
 /****************************************************************************
 ********************************* WORKS *************************************
 *****************************************************************************/
-
 #works{
-    background-image: linear-gradient(to left, #eed2ff, #b2eab5);
+    background-image: linear-gradient(#BDBDFF, #DEBDFF);
 }
 
 /****************************************************************************
@@ -164,9 +177,8 @@ main > section > .inner{
 *****************************************************************************/
 
 #services{
-    background-image: linear-gradient(to right, #ffd2f2, #e2eab2);
+    background-image: linear-gradient(#CCFFBD, #BDFFCF);
 }
-
 
 #services .services_container{
     width: max(50%, 290px);
@@ -181,11 +193,10 @@ main > section > .inner{
 }
 
 /****************************************************************************
-********************************** ABOUT **********************************
+********************************** CONTACT **********************************
 *****************************************************************************/
-
-#about{
-    background-image: linear-gradient(to left, #e0d2ff, #b2ddea);
+#contact{
+    background-image: linear-gradient(#E9FFBD, #FFDDBD);
 }
 
 </style>
