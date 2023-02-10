@@ -109,23 +109,21 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow-y: auto;
 }
 
 nav{
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
 	display: flex;
 	justify-content: flex-end;
 	text-transform: uppercase;
-	padding: var(--top-padding) var(--side-padding);
-	font-size: 1.2em;
+	padding: 0.3rem 2ch;
 	gap: 1.5em;
     z-index: 10;
     background-color: white;
-    border-bottom: 1px solid black;
+    box-shadow: 0 0 20px -4px #0004;
 }
 
 .nav_shortcut{
@@ -185,10 +183,12 @@ main > section > .inner{
 
 #intro{
 	display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 50px;
     background-image: linear-gradient(#BDF3FF, #BDD2FF);
-    /* min-height: calc(100% - (var(--top-padding) * 2 + 1.45em));
-    height: 100%; */
+    min-height: 100%;
+    height: 100%;
 }
 
 /****************************************************************************
