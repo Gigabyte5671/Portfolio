@@ -74,11 +74,33 @@ export default defineComponent({
 <style>
 @import url('../public/root.css');
 
-#app{
-	height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+:root {
+	--top-padding: 1vh;
+	--side-padding: 1rem;
+    --text-color: #000;
+}
+
+*,
+*::before,
+*::after {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	font-weight: normal;
+}
+
+html {
+    font-family: 'Manrope', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(0.6rem + 1rem);
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 main{
