@@ -72,7 +72,7 @@ export default defineComponent({
 </template>
 
 <style>
-@import url('../public/root.css');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap');
 
 :root {
 	--top-padding: 1vh;
