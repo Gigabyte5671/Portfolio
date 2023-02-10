@@ -9,12 +9,12 @@ export default defineComponent({
 </script>
 
 <template>
+    <nav>
+        <a href="#works" class="nav_shortcut"><p>Works</p><span class="material-symbols-rounded">brush</span></a>
+        <a href="#services" class="nav_shortcut"><p>Services</p><span class="material-symbols-rounded">home_repair_service</span></a>
+        <a href="#contact" class="nav_shortcut"><p>Contact</p><span class="material-symbols-rounded">send</span></a>
+    </nav>
     <main>
-        <nav>
-            <a href="#works" class="nav_shortcut">Works</a>
-            <a href="#services" class="nav_shortcut">Services</a>
-            <a href="#contact" class="nav_shortcut">Contact</a>
-        </nav>
         <section id="intro">
             <div class="inner">
                 
@@ -175,6 +175,10 @@ main > section > .inner{
     justify-content: center;
 }
 
+.nav_shortcut > span{
+    display: none;
+}
+
 /****************************************************************************
 ************************************ INTRO **********************************
 *****************************************************************************/
@@ -219,6 +223,17 @@ main > section > .inner{
 *****************************************************************************/
 #contact{
     background-image: linear-gradient(#E9FFBD, #FFDDBD);
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav_shortcut > p{
+        display: none;
+    }
+    .nav_shortcut > span{
+        display: contents;
+    }
+
 }
 
 </style>
