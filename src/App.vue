@@ -17,7 +17,37 @@ export default defineComponent({
     <main>
         <section id="intro">
             <div class="inner">
-                
+                <img src="./images/Zak-2 - Copy.webp" alt="me" width="400">
+                <h1>
+                    <span style="animation-delay: 0.0s;">H</span>
+                    <span style="animation-delay: 0.05s;">e</span>
+                    <span style="animation-delay: 0.1s;">l</span>
+                    <span style="animation-delay: 0.15s;">l</span>
+                    <span style="animation-delay: 0.2s;">o</span>
+                    <span style="animation-delay: 0.25s;">!</span>
+                </h1>
+                <p>
+                    <span style="animation-delay: 0.025s;">W</span>
+                    <span style="animation-delay: 0.05s;">e</span>
+                    <span style="animation-delay: 0.075s;">l</span>
+                    <span style="animation-delay: 0.1s;">c</span>
+                    <span style="animation-delay: 0.125s;">o</span>
+                    <span style="animation-delay: 0.15s;">m</span>
+                    <span style="animation-delay: 0.175s;">e</span>&nbsp;
+                    <span style="animation-delay: 0.2s;">t</span>
+                    <span style="animation-delay: 0.225s;">o</span>&nbsp;
+                    <span style="animation-delay: 0.25s;">m</span>
+                    <span style="animation-delay: 0.275s;">y</span>&nbsp;
+                    <span style="animation-delay: 0.3s;">p</span>
+                    <span style="animation-delay: 0.325s;">o</span>
+                    <span style="animation-delay: 0.35s;">r</span>
+                    <span style="animation-delay: 0.375s;">t</span>
+                    <span style="animation-delay: 0.4s;">f</span>
+                    <span style="animation-delay: 0.425s;">o</span>
+                    <span style="animation-delay: 0.45s;">l</span>
+                    <span style="animation-delay: 0.475s;">i</span>
+                    <span style="animation-delay: 0.5s;">o</span>
+                </p>
             </div>
 		</section>
 		<section id="works">
@@ -195,6 +225,71 @@ main > section > .inner{
     background-image: linear-gradient(#BDF3FF, #BDD2FF);
     min-height: 100%;
     height: 100%;
+}
+
+#intro > .inner{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#intro img{
+    border-radius: 50%;
+    mask-image: radial-gradient(circle at center, black 62%, transparent);
+    -webkit-mask-image: radial-gradient(circle at center, black 62%, transparent);
+    opacity: 0;
+    animation: introImageTransitionIn 1s ease forwards;
+}
+
+@keyframes introImageTransitionIn {
+    0%   {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#intro h1{
+    font-size: 5em;
+    overflow: hidden;
+    mask-image: linear-gradient(180deg, black 75%, transparent);
+    -webkit-mask-image: linear-gradient(180deg, black 75%, transparent);
+}
+
+#intro h1 span{
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: introHelloTransitionIn 0.5s ease forwards;
+}
+
+#intro p{
+    font-size: large;
+    line-height: 2;
+    overflow: hidden;
+    mask-image: linear-gradient(180deg, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(180deg, black 95%, transparent);
+}
+
+#intro p span{
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: introHelloTransitionIn 0.5s ease forwards;
+}
+
+@keyframes introHelloTransitionIn {
+    0%   {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 /****************************************************************************
