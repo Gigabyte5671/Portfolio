@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import ProfilePic from './images/Zak-2 - Copy.webp';
+</script>
+
 <script lang="ts">
 import { defineComponent } from 'vue';
 import ServiceCard from '@/components/ServiceCard.vue';
@@ -51,7 +55,7 @@ export default defineComponent({
     <main>
         <section id="intro">
             <div class="inner">
-                <img src="./images/Zak-2 - Copy.webp" alt="me" width="400">
+                <img :src="ProfilePic" alt="me" width="400">
                 <h1>
                     <span style="animation-delay: 0.0s;">H</span>
                     <span style="animation-delay: 0.05s;">e</span>
