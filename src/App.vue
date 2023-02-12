@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-expect-error: Image doesn't have a type definition.
 import ProfilePic from './images/Zak-2 - Copy.webp';
 </script>
 
