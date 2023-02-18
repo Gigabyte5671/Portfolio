@@ -49,12 +49,44 @@ export default defineComponent({
 
 <template>
     <nav :class="{ transparent: transparentNav }">
-        <a href="#works" class="nav_shortcut"><p>Works</p><span class="material-symbols-rounded">brush</span></a>
-        <a href="#services" class="nav_shortcut"><p>Services</p><span class="material-symbols-rounded">home_repair_service</span></a>
-        <a href="#contact" class="nav_shortcut"><p>Contact</p><span class="material-symbols-rounded">send</span></a>
+        <ul>
+            <li><a href="/" class="title">ZakWeb.dev</a></li>
+            <li><a href="#works" class="nav_shortcut"><p>Works</p><span class="material-symbols-rounded">brush</span></a></li>
+            <li><a href="#services" class="nav_shortcut"><p>Services</p><span class="material-symbols-rounded">home_repair_service</span></a></li>
+            <li><a href="#contact" class="nav_shortcut"><p>Contact</p><span class="material-symbols-rounded">send</span></a></li>
+        </ul>
     </nav>
     <main>
         <section id="intro">
+            <div class="background">
+                <div style="transform: rotate(10deg);">
+                    <span class="material-symbols-rounded">auto_awesome</span>
+                </div>
+                <div style="transform: rotate(50deg);">
+                    <span class="material-symbols-rounded">image</span>
+                </div>
+                <div style="transform: rotate(90deg);">
+                    <span class="material-symbols-rounded">movie_filter</span>
+                </div>
+                <div style="transform: rotate(130deg);">
+                    <span class="material-symbols-rounded">send</span>
+                </div>
+                <div style="transform: rotate(170deg);">
+                    <span class="material-symbols-rounded">brush</span>
+                </div>
+                <div style="transform: rotate(210deg);">
+                    <span class="material-symbols-rounded">code</span>
+                </div>
+                <div style="transform: rotate(250deg);">
+                    <span class="material-symbols-rounded">dynamic_form</span>
+                </div>
+                <div style="transform: rotate(290deg);">
+                    <span class="material-symbols-rounded">settings</span>
+                </div>
+                <div style="transform: rotate(330deg);">
+                    <span class="material-symbols-rounded">music_note</span>
+                </div>
+            </div>
             <div class="inner">
                 <img :src="ProfilePic" alt="me" width="400">
                 <h1>
@@ -66,26 +98,26 @@ export default defineComponent({
                     <span style="animation-delay: 0.25s;">!</span>
                 </h1>
                 <p>
-                    <span style="animation-delay: 0.025s;">W</span>
-                    <span style="animation-delay: 0.05s;">e</span>
-                    <span style="animation-delay: 0.075s;">l</span>
-                    <span style="animation-delay: 0.1s;">c</span>
-                    <span style="animation-delay: 0.125s;">o</span>
-                    <span style="animation-delay: 0.15s;">m</span>
-                    <span style="animation-delay: 0.175s;">e</span>&nbsp;
-                    <span style="animation-delay: 0.2s;">t</span>
-                    <span style="animation-delay: 0.225s;">o</span>&nbsp;
+                    <span style="animation-delay: 0.125s;">W</span>
+                    <span style="animation-delay: 0.15s;">e</span>
+                    <span style="animation-delay: 0.175s;">l</span>
+                    <span style="animation-delay: 0.2s;">c</span>
+                    <span style="animation-delay: 0.225s;">o</span>
                     <span style="animation-delay: 0.25s;">m</span>
-                    <span style="animation-delay: 0.275s;">y</span>&nbsp;
-                    <span style="animation-delay: 0.3s;">p</span>
-                    <span style="animation-delay: 0.325s;">o</span>
-                    <span style="animation-delay: 0.35s;">r</span>
-                    <span style="animation-delay: 0.375s;">t</span>
-                    <span style="animation-delay: 0.4s;">f</span>
+                    <span style="animation-delay: 0.275s;">e</span>&nbsp;
+                    <span style="animation-delay: 0.3s;">t</span>
+                    <span style="animation-delay: 0.325s;">o</span>&nbsp;
+                    <span style="animation-delay: 0.35s;">m</span>
+                    <span style="animation-delay: 0.375s;">y</span>&nbsp;
+                    <span style="animation-delay: 0.4s;">p</span>
                     <span style="animation-delay: 0.425s;">o</span>
-                    <span style="animation-delay: 0.45s;">l</span>
-                    <span style="animation-delay: 0.475s;">i</span>
-                    <span style="animation-delay: 0.5s;">o</span>
+                    <span style="animation-delay: 0.45s;">r</span>
+                    <span style="animation-delay: 0.475s;">t</span>
+                    <span style="animation-delay: 0.5s;">f</span>
+                    <span style="animation-delay: 0.525s;">o</span>
+                    <span style="animation-delay: 0.55s;">l</span>
+                    <span style="animation-delay: 0.575s;">i</span>
+                    <span style="animation-delay: 0.6s;">o</span>
                 </p>
             </div>
 		</section>
@@ -192,10 +224,7 @@ nav{
     left: 0;
     width: 100%;
 	display: flex;
-	justify-content: flex-end;
-	text-transform: uppercase;
 	padding: 0.3rem 2ch;
-	gap: 3ch;
     z-index: 10;
     background-color: white;
     box-shadow: 0 0 20px -4px #0004;
@@ -207,9 +236,36 @@ nav.transparent{
     box-shadow: 0 0 20px -4px #0000;
 }
 
-.nav_shortcut{
+nav .title{
+    opacity: 1;
+}
+
+nav.transparent .title{
+    opacity: 0;
+}
+
+nav > ul{
+	display: flex;
+    flex-flow: row nowrap;
+	justify-content: flex-end;
+	gap: 3ch;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+	text-transform: uppercase;
+}
+
+nav > ul li:first-child{
+    margin-right: auto;
+	text-transform: none;
+}
+
+nav > ul li a{
 	color: var(--text-color);
-	text-decoration: none;
+    text-decoration: none;
+}
+
+.nav_shortcut{
 	display: flex;
     align-items: flex-end;
 }
@@ -245,13 +301,13 @@ main > section > .inner{
 }
 
 .section_divider{
-    background-color: white;
-    width: 100%;
-    height: 10vh;
-    min-height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 10vh;
+    min-height: 10vh;
+    background-color: white;
 }
 
 .nav_shortcut > span{
@@ -270,17 +326,110 @@ main > section > .inner{
     background-image: linear-gradient(#BDF3FF, #BDD2FF);
     min-height: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+#intro > .background{
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    animation: introBackgroundRotate 150s linear infinite;
+    user-select: none;
+}
+
+@keyframes introBackgroundRotate {
+    0%   {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#intro > .background > div{
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 0;
+    transform-origin: center;
+    opacity: 0;
+    animation: introIconsTransitionIn 0.75s 0.5s ease forwards;
+}
+
+@keyframes introIconsTransitionIn {
+    0%   {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 95vmin;
+        opacity: 1;
+    }
+}
+
+#intro > .background > div span{
+    position: absolute;
+    color: #fffb;
+    /* color: #f116; */
+    font-size: 6vmax;
+    text-shadow: 0px 0px 0.5em #fff8;
+    transform-origin: center;
+    transition: 0.1s ease color;
+    animation: introIconsRotate 150s linear infinite;
+}
+
+@keyframes introIconsRotate {
+    0%   {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#intro > .background > div:nth-child(2) span{
+    filter: hue-rotate(19deg) brightness(1.2);
+}
+#intro > .background > div:nth-child(3) span{
+    filter: hue-rotate(110deg);
+}
+#intro > .background > div:nth-child(4) span{
+    filter: hue-rotate(146deg);
+}
+#intro > .background > div:nth-child(5) span{
+    filter: hue-rotate(180deg);
+}
+#intro > .background > div:nth-child(6) span{
+    filter: hue-rotate(216deg);
+}
+#intro > .background > div:nth-child(7) span{
+    filter: hue-rotate(252deg);
+}
+#intro > .background > div:nth-child(8) span{
+    filter: hue-rotate(288deg);
+}
+#intro > .background > div:nth-child(9) span{
+    filter: hue-rotate(324deg);
 }
 
 #intro > .inner{
+    z-index: 2;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    filter: drop-shadow(0px 0px 180px #fff);
 }
 
 #intro img{
+    width: min(400px, 75vw);
     border-radius: 50%;
     mask-image: radial-gradient(circle at center, black 62%, transparent);
     -webkit-mask-image: radial-gradient(circle at center, black 62%, transparent);
