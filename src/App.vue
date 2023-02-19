@@ -384,7 +384,7 @@ main > section > .inner{
     position: absolute;
     color: #fffb;
     /* color: #f116; */
-    font-size: 6vmax;
+    font-size: clamp(48px, 6vmax, 5rem);
     text-shadow: 0px 0px 0.5em #fff8;
     transform-origin: center;
     transition: 0.1s ease color;
