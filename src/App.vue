@@ -153,9 +153,7 @@ export default defineComponent({
             </div>
             <div class="inner">
                 <div class="services_container">
-                    <ServiceCard name="UX Consulting" :rate="70"/>
-                    <ServiceCard name="Website Development" :rate="70"/>
-                    <ServiceCard name="UX Consulting" :rate="70"/>
+                    <ServiceCard name="UX Consulting" :rate="90"/>
                     <ServiceCard name="Website Development" :rate="70"/>
                 </div>
             </div>
