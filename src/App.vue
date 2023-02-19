@@ -488,6 +488,18 @@ main > section > .inner{
     }
 }
 
+@media screen and (max-width: 900px) {
+    #intro > .background{
+        display: none;
+    }
+}
+@media screen and (max-height: 900px) {
+    #intro > .background{
+        display: none;
+    }
+}
+
+
 /****************************************************************************
 ********************************* WORKS *************************************
 *****************************************************************************/
@@ -529,6 +541,9 @@ main > section > .inner{
     }
     .nav_shortcut > span{
         display: contents;
+    }
+    h2 {
+        font-size: 1.3rem;
     }
 
 }
