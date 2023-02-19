@@ -131,6 +131,8 @@ export default defineComponent({
                 <WorkItem name="Vircadia Website" description="The website for Vircadia" link="https://vircadia.com/" image="https://raw.githubusercontent.com/vircadia/vircadia-web/master/public/assets/vircadia-icon.svg"/>
 
                 <WorkItem name="CSS Canvas" description="Create amazing CSS components, without any markup!" link="https://gigabyte5671.github.io/CSS-Canvas/" image="https://gigabyte5671.github.io/CSS-Canvas/assets/logo-small.3797bbd8.webp"/>
+
+                <WorkItem name="Micro Test-Runner" description="A minimal JavaScript test runner." link="https://www.npmjs.com/package/micro-test-runner" image="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/javascript/default/48px.svg"/>
                 
                 <WorkItem name="Auto Type" description="A simple auto-typing/typewriter effect written in vanilla JS." link="https://gigabyte5671.github.io/AutoType/" image="https://gigabyte5671.github.io/AutoType/favicon.svg" :whiteImage="true"/>
 
