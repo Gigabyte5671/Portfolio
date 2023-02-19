@@ -560,6 +560,7 @@ main > section > .inner{
 #contact .links {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     gap: 5rem;
     margin: auto;
 }
