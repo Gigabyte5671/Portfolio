@@ -165,14 +165,16 @@ export default defineComponent({
                 <h1>CONTACT</h1>
             </div>
             <div class="inner">
-                <div>
-                    <img src="/22832983.png" alt="" width="300" height="300" style="border-radius: 150px;">
-                    <p>Email: contact@zakweb.dev</p>
+                <a href="mailto:contact@zakweb.dev" class="email"><span class="material-symbols-rounded">email</span>&nbsp;&nbsp;&nbsp;contact@zakweb.dev</a>
+                <div class="links">
                     <a href="https://github.com/Gigabyte5671">
-                        <img src="/github_logo.svg" alt="Github" width="100">
+                        <img src="https://cdn.simpleicons.org/github/#181717" alt="Github" width="100">
                     </a>
                     <a href="https://www.linkedin.com/in/zakmanley/">
-                        <img src="/linkedin_logo.png" alt="LinkedIn" width="100">
+                        <img src="https://cdn.simpleicons.org/linkedin/#0A66C2" alt="LinkedIn" width="100">
+                    </a>
+                    <a href="https://www.npmjs.com/~gigabyte5671">
+                        <img src="https://cdn.simpleicons.org/npm/#CB3837" alt="NPM" width="100">
                     </a>
                 </div>
             </div>
@@ -267,12 +269,14 @@ nav > ul li a{
     text-decoration: none;
 }
 
-.nav_shortcut{
+.nav_shortcut,
+.email{
 	display: flex;
     align-items: flex-end;
 }
 
-.nav_shortcut::after{
+.nav_shortcut::after,
+.email::after{
     content: "";
 	background-color: var(--text-color);
     position: absolute;
@@ -284,7 +288,8 @@ nav > ul li a{
     transition: width 0.6s cubic-bezier(0.2, 1, 0.2, 1) 0s;
 }
 
-.nav_shortcut:hover::after{
+.nav_shortcut:hover::after,
+.email:hover::after{
 	left: 0px;
     right: auto;
     width: 100%;
@@ -532,6 +537,31 @@ main > section > .inner{
 *****************************************************************************/
 #contact{
     background-image: linear-gradient(#E9FFBD, #FFDDBD);
+}
+
+#contact > .inner {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#contact .email {
+    width: max-content;
+    margin: auto;
+    padding: 1ch 2ch;
+    color: var(--text-color);
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 30px -10px #0004;
+    overflow: hidden;
+}
+
+#contact .links {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5rem;
+    margin: auto;
 }
 
 
