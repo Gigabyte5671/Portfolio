@@ -126,9 +126,11 @@ export default defineComponent({
                 <h1>WORKS</h1>
             </div>
             <div class="inner">
-                <WorkItem name="DashBooks Website" description="A website for an upcoming project" link="https://dashbooks.app/" image="https://dashbooks.app/assets/logo.aa87dd82.svg" :inProgress="true"/>
+                <WorkItem name="DashBooks Website" description="A website for an upcoming project." link="https://dashbooks.app/" image="https://dashbooks.app/assets/logo.aa87dd82.svg" :inProgress="true"/>
 
-                <WorkItem name="Vircadia Website" description="The website for Vircadia" link="https://vircadia.com/" image="https://raw.githubusercontent.com/vircadia/vircadia-web/master/public/assets/vircadia-icon.svg"/>
+                <WorkItem name="DashBooks" description="Bookkeeping, made fast. A web application for time keeping, invoicing and finances." link="https://demo.dashbooks.app/" image="https://dashbooks.app/assets/logo.aa87dd82.svg" :inProgress="true"/>
+
+                <WorkItem name="Vircadia Web App" description="Your open source portal to the metaverse!" link="https://app.vircadia.com/" image="https://raw.githubusercontent.com/vircadia/vircadia-web/master/public/assets/vircadia-icon.svg"/>
 
                 <WorkItem name="CSS Canvas" description="Create amazing CSS components, without any markup!" link="https://gigabyte5671.github.io/CSS-Canvas/" image="https://gigabyte5671.github.io/CSS-Canvas/assets/logo-small.3797bbd8.webp"/>
 
