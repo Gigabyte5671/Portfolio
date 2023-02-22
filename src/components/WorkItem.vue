@@ -52,7 +52,7 @@ export default defineComponent({
 			<p>{{ description }}</p>
 		</div>
 		<div v-if="image != ''" class="work_image_outer" :class="{ white_image: whiteImage }">
-			<img :src="image" width="65">work_image_outer
+			<img :src="image" width="65">
 		</div>
 	</a>
 </template>
