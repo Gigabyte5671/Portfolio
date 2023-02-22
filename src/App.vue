@@ -132,13 +132,13 @@ export default defineComponent({
 
                 <WorkItem name="Vircadia Web App" description="Your open source portal to the metaverse!" link="https://app.vircadia.com/" image="https://raw.githubusercontent.com/vircadia/vircadia-web/master/public/assets/vircadia-icon.svg"/>
 
-                <WorkItem name="CSS Canvas" description="Create amazing CSS components, without any markup!" link="https://gigabyte5671.github.io/CSS-Canvas/" image="https://gigabyte5671.github.io/CSS-Canvas/assets/logo-small.3797bbd8.webp"/>
+                <WorkItem name="CSS Canvas" description="Create amazing CSS components, without any markup!" link="https://css-canvas.zakweb.dev/" image="https://css-canvas.zakweb.dev/assets/logo-small.3797bbd8.webp"/>
 
                 <WorkItem name="Micro Test-Runner" description="A minimal JavaScript test runner." link="https://www.npmjs.com/package/micro-test-runner" image="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/javascript/default/48px.svg"/>
                 
-                <WorkItem name="Auto Type" description="A simple auto-typing/typewriter effect written in vanilla JS." link="https://gigabyte5671.github.io/AutoType/" image="https://gigabyte5671.github.io/AutoType/favicon.svg" :whiteImage="true"/>
+                <WorkItem name="Auto Type" description="A simple auto-typing/typewriter effect written in vanilla JS." link="https://autotype.zakweb.dev/" image="https://autotype.zakweb.dev/favicon.svg" :whiteImage="true"/>
 
-                <WorkItem name="DOM Particles" description="A simple particle engine that uses vanilla JavaScript to run within the native HTML DOM." link="https://gigabyte5671.github.io/DOM-Particles/" image="https://gigabyte5671.github.io/DOM-Particles/favicon.webp"/>
+                <WorkItem name="DOM Particles" description="A simple particle engine that uses vanilla JavaScript to run within the native HTML DOM." link="https://dom-particles.zakweb.dev/" image="https://dom-particles.zakweb.dev/favicon.webp"/>
 
                 <WorkItem name="Wilderzone API" description="A Node JS API to retreive and return the current number of players in the Tribes Ascend game." link="https://api.wilderzone.live/" image="https://raw.githubusercontent.com/wilderzone/ta-network-api/main/logo.svg"/>
 
@@ -146,7 +146,7 @@ export default defineComponent({
 
                 <WorkItem name="Wilderzone Org" description="Base repo for the Tribes Ascend Community Hub's Wilderzone.org restoration project." link="https://wilderzone.org/" image="https://github.com/wilderzone/wilderzone-live/blob/main/assets/images/wilderzone_logo_symbol_black_small.png?raw=true" :inProgress="true"/>
 
-                <WorkItem name="Cookie Manager" description="An incredibly simple and lightweight library for adding, fetching, modifying, and removing browser cookies." link="https://gigabyte5671.github.io/CookieManager/" image="https://img.icons8.com/color/96/000000/cookies.png"/>
+                <WorkItem name="Cookie Manager" description="An incredibly simple and lightweight library for adding, fetching, modifying, and removing browser cookies." link="https://cookie-manager.zakweb.dev/" image="https://img.icons8.com/color/96/000000/cookies.png"/>
             </div>
 		</section>
 		<section id="services">
