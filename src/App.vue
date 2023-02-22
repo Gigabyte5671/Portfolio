@@ -155,8 +155,25 @@ export default defineComponent({
             </div>
             <div class="inner">
                 <div class="services_container">
-                    <ServiceCard name="UX Consulting" :rate="90"/>
-                    <ServiceCard name="Website Development" :rate="70"/>
+                    <ServiceCard name="UX Consulting" :rate="90">
+                        <p>Description</p>
+                        <p>One-off or regular consulting sessions to help you improve the user experience of your application, game, or website. We can discuss directly over your preferred communication medium, or communicate back and forth via email. </p>
+                        <p>Deliverables</p>
+                        <ul>
+                            <li><b>Tips & Advice</b><br>Tips and advice on how you can improve the user experience (UX) of your application, game, or website.</li>
+                            <li><b>Guides</b><br>A direct explanation of features you can improve, and clear guidance on how to implement fixes.</li>
+                        </ul>
+                    </ServiceCard>
+                    <ServiceCard name="Website Development" :rate="70">
+                        <p>Deliverables</p>
+                        <ul>
+                            <li><b>Project Discussion Meeting</b><br>A meeting over your preferred communication medium to discuss the project goals and website requirements.</li>
+                            <li><b>Design Mockup</b><br>An initial mockup of the website's design, so you can give feedback and make adjustments before development starts.</li>
+                            <li><b>First Development Draft</b><br>Hot off the press! The first draft of the website with basic functionality in place.</li>
+                            <li><b>Services Discussion Meeting</b><br>A meeting over your preferred communication medium to discuss any third-party services that are required to complete the functionality of your website. For example: domains, hosting, databases, etc.</li>
+                            <li><b>Complete Website</b><br>The keys to the Kingdom! Your new, fully-functional website will be handed over, along with any tools and documentation you need to keep it running.</li>
+                        </ul>
+                    </ServiceCard>
                 </div>
             </div>
 		</section>
