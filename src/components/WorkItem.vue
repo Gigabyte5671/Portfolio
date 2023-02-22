@@ -1,5 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
+import type { PropType } from 'vue';
+
 export default defineComponent({
     name: 'WorkItem',
     props: {
@@ -30,6 +32,11 @@ export default defineComponent({
         whiteImage: {
             type: Boolean,
             default: false
+        },
+        badges: {
+            type: Array as PropType<Array<string>>,
+            default: () => [],
+            required: false
         }
     }
 })
@@ -42,6 +49,9 @@ export default defineComponent({
             <div class="work_item_top_section">
                 <h2>{{ name }}</h2>
                 <span v-if="inProgress" class="coming_soon_badge">Coming Soon</span>
+            </div>
+            <div class="badges">
+                <img v-for="badge in badges" :key="badge" :src="`https://cdn.simpleicons.org/${badge.split('_').join('')}`" :alt="badge.split('_').join(' ')" :title="badge.split('_').join(' ')">
             </div>
             <p>{{ description }}</p>
         </div>
@@ -138,5 +148,18 @@ export default defineComponent({
 
 .white_image{
     background-color: #2d2d2d;
+}
+
+.badges {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1ch;
+    font-size: 1rem;
+}
+.badges img {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    aspect-ratio: 1;
 }
 </style>

@@ -104,27 +104,27 @@ export default defineComponent({
                 <h1>WORKS</h1>
             </div>
             <div class="inner">
-                <WorkItem name="DashBooks Website" description="A website for an upcoming project." link="https://dashbooks.app/" image="https://dashbooks.app/assets/logo.aa87dd82.svg" :inProgress="true"/>
+                <WorkItem name="DashBooks Website" description="A website for an upcoming project." link="https://dashbooks.app/" image="https://dashbooks.app/assets/logo.aa87dd82.svg" :inProgress="true" :badges="['Vue.js', 'Vite', 'TypeScript', 'Google_Domains']"/>
 
-                <WorkItem name="DashBooks" description="Bookkeeping, made fast. A web application for time keeping, invoicing and finances." link="https://demo.dashbooks.app/" image="https://dashbooks.app/assets/logo.aa87dd82.svg" :inProgress="true"/>
+                <WorkItem name="DashBooks" description="Bookkeeping, made fast. A web application for time keeping, invoicing and finances." link="https://demo.dashbooks.app/" image="https://dashbooks.app/assets/logo.aa87dd82.svg" :inProgress="true" :badges="['Vue.js', 'Vite', 'TypeScript', 'Firebase', 'GitHub_Actions', 'Google_Domains']"/>
 
-                <WorkItem name="Vircadia Web App" description="Your open source portal to the metaverse!" link="https://app.vircadia.com/" image="https://raw.githubusercontent.com/vircadia/vircadia-web/master/public/assets/vircadia-icon.svg"/>
+                <WorkItem name="Vircadia Web App" description="Your open source portal to the metaverse!" link="https://app.vircadia.com/" image="https://raw.githubusercontent.com/vircadia/vircadia-web/master/public/assets/vircadia-icon.svg" :badges="['Vue.js', 'Webpack', 'TypeScript', 'GitHub_Actions']"/>
 
-                <WorkItem name="CSS Canvas" description="Create amazing CSS components, without any markup!" link="https://css-canvas.zakweb.dev/" image="https://css-canvas.zakweb.dev/assets/logo-small.3797bbd8.webp"/>
+                <WorkItem name="CSS Canvas" description="Create amazing CSS components, without any markup!" link="https://css-canvas.zakweb.dev/" image="https://css-canvas.zakweb.dev/assets/logo-small.3797bbd8.webp" :badges="['Vue.js', 'Vite', 'TypeScript', 'GitHub_Actions']"/>
 
-                <WorkItem name="Micro Test-Runner" description="A minimal JavaScript test runner." link="https://www.npmjs.com/package/micro-test-runner" image="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/javascript/default/48px.svg"/>
+                <WorkItem name="Micro Test-Runner" description="A minimal JavaScript test runner." link="https://www.npmjs.com/package/micro-test-runner" image="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/javascript/default/48px.svg" :badges="['TypeScript', 'NPM']"/>
                 
-                <WorkItem name="Auto Type" description="A simple auto-typing/typewriter effect written in vanilla JS." link="https://autotype.zakweb.dev/" image="https://autotype.zakweb.dev/favicon.svg" :whiteImage="true"/>
+                <WorkItem name="Auto Type" description="A simple auto-typing/typewriter effect written in vanilla JS." link="https://autotype.zakweb.dev/" image="https://autotype.zakweb.dev/favicon.svg" :whiteImage="true" :badges="['CSS_3', 'TypeScript', 'Firebase']"/>
 
-                <WorkItem name="DOM Particles" description="A simple particle engine that uses vanilla JavaScript to run within the native HTML DOM." link="https://dom-particles.zakweb.dev/" image="https://dom-particles.zakweb.dev/favicon.webp"/>
+                <WorkItem name="DOM Particles" description="A simple particle engine that uses vanilla JavaScript to run within the native HTML DOM." link="https://dom-particles.zakweb.dev/" image="https://dom-particles.zakweb.dev/favicon.webp" :badges="['HTML_5', 'JavaScript']"/>
 
-                <WorkItem name="Wilderzone API" description="A Node JS API to retreive and return the current number of players in the Tribes Ascend game." link="https://api.wilderzone.live/" image="https://raw.githubusercontent.com/wilderzone/ta-network-api/main/logo.svg"/>
+                <WorkItem name="Wilderzone API" description="Web interface for easy access to the TA Network API." link="https://api.wilderzone.live/" image="https://raw.githubusercontent.com/wilderzone/ta-network-api/main/logo.svg" :badges="['TypeScript', 'Firebase', 'Express', 'Google_Domains']"/>
 
-                <WorkItem name="Wilderzone Live" description="The hub for all things Tribes: Ascend." link="https://wilderzone.live/" image="https://raw.githubusercontent.com/wilderzone/wilderzone-live/vue/src/assets/branding/Logo-Light.svg"/>
 
-                <WorkItem name="Wilderzone Org" description="Base repo for the Tribes Ascend Community Hub's Wilderzone.org restoration project." link="https://wilderzone.org/" image="https://github.com/wilderzone/wilderzone-live/blob/main/assets/images/wilderzone_logo_symbol_black_small.png?raw=true" :inProgress="true"/>
+                <WorkItem name="Wilderzone Live" description="The hub for all things Tribes: Ascend." link="https://wilderzone.live/" image="https://raw.githubusercontent.com/wilderzone/wilderzone-live/vue/src/assets/branding/Logo-Light.svg" :badges="['HTML_5', 'CSS_3', 'JavaScript', 'GitHub_Pages', 'Google_Analytics', 'Google_Domains']"/>
 
-                <WorkItem name="Cookie Manager" description="An incredibly simple and lightweight library for adding, fetching, modifying, and removing browser cookies." link="https://cookie-manager.zakweb.dev/" image="https://img.icons8.com/color/96/000000/cookies.png"/>
+                <WorkItem name="Wilderzone Org" description="Base repo for the Tribes Ascend Community Hub's Wilderzone.org restoration project." link="https://wilderzone.org/" image="https://github.com/wilderzone/wilderzone-live/blob/main/assets/images/wilderzone_logo_symbol_black_small.png?raw=true" :inProgress="true" :badges="['HTML_5', 'CSS_3', 'GitHub_Pages', 'Google_Domains']"/>
+                <WorkItem name="Cookie Manager" description="An incredibly simple and lightweight library for adding, fetching, modifying, and removing browser cookies." link="https://cookie-manager.zakweb.dev/" image="https://img.icons8.com/color/96/000000/cookies.png" :badges="['JavaScript']"/>
             </div>
 		</section>
 		<section id="services">
