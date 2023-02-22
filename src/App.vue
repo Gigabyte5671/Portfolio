@@ -98,26 +98,7 @@ export default defineComponent({
                     <span style="animation-delay: 0.25s;">!</span>
                 </h1>
                 <p>
-                    <span style="animation-delay: 0.125s;">W</span>
-                    <span style="animation-delay: 0.15s;">e</span>
-                    <span style="animation-delay: 0.175s;">l</span>
-                    <span style="animation-delay: 0.2s;">c</span>
-                    <span style="animation-delay: 0.225s;">o</span>
-                    <span style="animation-delay: 0.25s;">m</span>
-                    <span style="animation-delay: 0.275s;">e</span>&nbsp;
-                    <span style="animation-delay: 0.3s;">t</span>
-                    <span style="animation-delay: 0.325s;">o</span>&nbsp;
-                    <span style="animation-delay: 0.35s;">m</span>
-                    <span style="animation-delay: 0.375s;">y</span>&nbsp;
-                    <span style="animation-delay: 0.4s;">p</span>
-                    <span style="animation-delay: 0.425s;">o</span>
-                    <span style="animation-delay: 0.45s;">r</span>
-                    <span style="animation-delay: 0.475s;">t</span>
-                    <span style="animation-delay: 0.5s;">f</span>
-                    <span style="animation-delay: 0.525s;">o</span>
-                    <span style="animation-delay: 0.55s;">l</span>
-                    <span style="animation-delay: 0.575s;">i</span>
-                    <span style="animation-delay: 0.6s;">o</span>
+                    This is where creativity and innovation meet.
                 </p>
             </div>
 		</section>
