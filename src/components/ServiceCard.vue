@@ -34,6 +34,7 @@ export default defineComponent({
     padding: 1rem 1.5rem 2rem;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 0 3px 30px -10px #0004;
 }
 
 .bold_text{
