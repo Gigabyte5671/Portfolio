@@ -166,6 +166,7 @@ export default defineComponent({
             </div>
             <div class="inner">
                 <a href="mailto:contact@zakweb.dev" class="email"><span class="material-symbols-rounded">email</span>&nbsp;&nbsp;&nbsp;contact@zakweb.dev</a>
+                <a href="https://discordapp.com/users/210305632266485760" class="email"><img src="https://cdn.simpleicons.org/discord/" alt="Discord" width="25">&nbsp;&nbsp;&nbsp;Gigabyte#3310</a>
                 <div class="links">
                     <a href="https://github.com/Gigabyte5671">
                         <img src="https://cdn.simpleicons.org/github/#181717" alt="Github" width="100">
@@ -197,7 +198,6 @@ export default defineComponent({
 	position: relative;
 	box-sizing: border-box;
 	margin: 0;
-	font-weight: normal;
 }
 
 html {
