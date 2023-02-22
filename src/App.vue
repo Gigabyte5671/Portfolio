@@ -120,10 +120,12 @@ export default defineComponent({
 
                 <WorkItem name="Wilderzone API" description="Web interface for easy access to the TA Network API." link="https://api.wilderzone.live/" image="https://raw.githubusercontent.com/wilderzone/ta-network-api/main/logo.svg" :badges="['TypeScript', 'Firebase', 'Express', 'Google_Domains']"/>
 
+                <WorkItem name="TA Network API" description="An open interface for fetching data from the Tribes: Ascend servers." link="https://www.npmjs.com/package/ta-network-api" image="https://raw.githubusercontent.com/wilderzone/ta-network-api/main/logo.svg" :badges="['TypeScript', 'NPM']"/>
 
                 <WorkItem name="Wilderzone Live" description="The hub for all things Tribes: Ascend." link="https://wilderzone.live/" image="https://raw.githubusercontent.com/wilderzone/wilderzone-live/vue/src/assets/branding/Logo-Light.svg" :badges="['HTML_5', 'CSS_3', 'JavaScript', 'GitHub_Pages', 'Google_Analytics', 'Google_Domains']"/>
 
                 <WorkItem name="Wilderzone Org" description="Base repo for the Tribes Ascend Community Hub's Wilderzone.org restoration project." link="https://wilderzone.org/" image="https://github.com/wilderzone/wilderzone-live/blob/main/assets/images/wilderzone_logo_symbol_black_small.png?raw=true" :inProgress="true" :badges="['HTML_5', 'CSS_3', 'GitHub_Pages', 'Google_Domains']"/>
+
                 <WorkItem name="Cookie Manager" description="An incredibly simple and lightweight library for adding, fetching, modifying, and removing browser cookies." link="https://cookie-manager.zakweb.dev/" image="https://img.icons8.com/color/96/000000/cookies.png" :badges="['JavaScript']"/>
             </div>
 		</section>
