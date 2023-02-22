@@ -24,15 +24,18 @@ export default defineComponent({
         <h2>{{ name }}</h2>
         <p class="soft_text">STARTING AT</p>
         <p class="bold_text"> ${{ rate }} / {{ ratePerUnit }}</p>
+        <slot></slot>
     </div>
 </template>
 
 <style scoped>
 .service_listing{
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
     width: 100%;
     padding: 2vh 0px;
+}
+.service_listing:last-of-type{
+    border-bottom: 1px solid black;
 }
 
 p{
