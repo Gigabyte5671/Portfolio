@@ -22,7 +22,7 @@ export default defineComponent({
 <template>
 	<div class="service_listing">
         <h2>{{ name }}</h2>
-        <p class="soft_text">STARTING AT</p>
+        <p class="soft_text">Starting At</p>
         <p class="bold_text"> ${{ rate }} / {{ ratePerUnit }}</p>
         <slot></slot>
     </div>
@@ -30,16 +30,10 @@ export default defineComponent({
 
 <style scoped>
 .service_listing{
-    border-top: 1px solid black;
     width: 100%;
-    padding: 2vh 0px;
-}
-.service_listing:last-of-type{
-    border-bottom: 1px solid black;
-}
-
-p{
-    text-transform: uppercase;
+    padding: 1rem 1.5rem 2rem;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .bold_text{

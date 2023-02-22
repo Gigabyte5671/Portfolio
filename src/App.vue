@@ -89,7 +89,7 @@ export default defineComponent({
             </div>
             <div class="inner">
                 <img :src="ProfilePic" alt="me" width="400">
-                <h1>
+                <h1 style="opacity: 0.6;">
                     <span style="animation-delay: 0.0s;">H</span>
                     <span style="animation-delay: 0.05s;">e</span>
                     <span style="animation-delay: 0.1s;">l</span>
@@ -97,9 +97,6 @@ export default defineComponent({
                     <span style="animation-delay: 0.2s;">o</span>
                     <span style="animation-delay: 0.25s;">!</span>
                 </h1>
-                <p>
-                    This is where creativity and innovation meet.
-                </p>
             </div>
 		</section>
 		<section id="works">
@@ -137,16 +134,22 @@ export default defineComponent({
             <div class="inner">
                 <div class="services_container">
                     <ServiceCard name="UX Consulting" :rate="90">
-                        <p>Description</p>
+                        <br>
                         <p>One-off or regular consulting sessions to help you improve the user experience of your application, game, or website. We can discuss directly over your preferred communication medium, or communicate back and forth via email. </p>
-                        <p>Deliverables</p>
+                        <br>
+                        <p>Deliverables:</p>
+                        <br>
                         <ul>
                             <li><b>Tips & Advice</b><br>Tips and advice on how you can improve the user experience (UX) of your application, game, or website.</li>
                             <li><b>Guides</b><br>A direct explanation of features you can improve, and clear guidance on how to implement fixes.</li>
                         </ul>
                     </ServiceCard>
+                    <br>
+                    <br>
                     <ServiceCard name="Website Development" :rate="70">
-                        <p>Deliverables</p>
+                        <br>
+                        <p>Deliverables:</p>
+                        <br>
                         <ul>
                             <li><b>Project Discussion Meeting</b><br>A meeting over your preferred communication medium to discuss the project goals and website requirements.</li>
                             <li><b>Design Mockup</b><br>An initial mockup of the website's design, so you can give feedback and make adjustments before development starts.</li>
@@ -167,13 +170,13 @@ export default defineComponent({
                 <a href="https://discordapp.com/users/210305632266485760" class="email"><img src="https://cdn.simpleicons.org/discord/" alt="Discord" width="25">&nbsp;&nbsp;&nbsp;Gigabyte#3310</a>
                 <div class="links">
                     <a href="https://github.com/Gigabyte5671">
-                        <img src="https://cdn.simpleicons.org/github/#181717" alt="Github" width="100">
+                        <img src="https://cdn.simpleicons.org/github/#181717" alt="Github" width="60">
                     </a>
                     <a href="https://www.linkedin.com/in/zakmanley/">
-                        <img src="https://cdn.simpleicons.org/linkedin/#0A66C2" alt="LinkedIn" width="100">
+                        <img src="https://cdn.simpleicons.org/linkedin/#0A66C2" alt="LinkedIn" width="60">
                     </a>
                     <a href="https://www.npmjs.com/~gigabyte5671">
-                        <img src="https://cdn.simpleicons.org/npm/#CB3837" alt="NPM" width="100">
+                        <img src="https://cdn.simpleicons.org/npm/#CB3837" alt="NPM" width="60">
                     </a>
                 </div>
             </div>
@@ -218,6 +221,12 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+h1,
+h2,
+h3{
+    font-weight: normal;
 }
 
 nav{
@@ -519,15 +528,8 @@ main > section > .inner{
 }
 
 #services .services_container{
-    width: max(50%, 290px);
-}
-
-.services_container > .service_listing:first-of-type{
-    border-top: 2px solid black;
-}
-
-.services_container > .service_listing:last-of-type{
-    border-bottom: 2px solid black;
+    width: 100%;
+    max-width: 800px;
 }
 
 /****************************************************************************
