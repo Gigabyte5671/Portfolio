@@ -105,7 +105,7 @@ export default defineComponent({
 					description="Bookkeeping, made fast. A web application for time keeping, invoicing and finances."
 					link="https://demo.dashbooks.app/"
 					image="https://dashbooks.app/assets/logo.aa87dd82.svg"
-					:badges="['Vue.js', 'Vite', 'TypeScript', 'Firebase', 'GitHub_Actions', 'Google_Domains']"
+					:badges="['Vue.js', 'Webpack', 'TypeScript', 'Firebase', 'GitHub_Actions', 'Google_Domains']"
 					inProgress
 				/>
 				<WorkItem
