@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gigabyte5671/portfolio-2.git"
+  },
+  "author": "Zak Manley <contact@zakweb.dev>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gigabyte5671/portfolio-2/issues"
+  },
+  "homepage": "https://github.com/Gigabyte5671/portfolio-2#readme",
+  "dependencies": {
+    "@arrow-js/core": "^1.0.0-alpha.8"
+  }
+}
