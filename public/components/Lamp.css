@@ -11,6 +11,11 @@
 	width: 9rem;
 	height: 9rem;
 }
+@media screen and (max-width: 1200px) {
+	.lamp {
+		display: none;
+	}
+}
 .lamp > .shadow {
 	position: absolute;
 	bottom: 0;

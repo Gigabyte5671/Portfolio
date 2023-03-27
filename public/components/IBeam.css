@@ -56,6 +56,17 @@
 		-0.3rem 0 1px 0 hsl(0, 54%, 20%),
 		-0.3rem 0 0.5rem 0 #0008;
 }
+@media screen and (max-width: 700px) {
+	.ibeam.horizontal {
+		width: 100%;
+	}
+	.ibeam.vertical.left {
+		display: none;
+	}
+	.ibeam.vertical.right {
+		display: none;
+	}
+}
 .ibeam .plate {
 	display: grid;
 	place-items: center;
@@ -145,4 +156,14 @@
 .ibeam.vertical .bolt.end {
 	filter:
 		drop-shadow(0 -1px 1px #000);
+}
+@media screen and (max-width: 700px) {
+	.ibeam.horizontal > .bolt:nth-child(2n) {
+		display: none;
+	}
+}
+@media screen and (max-width: 450px) {
+	.ibeam.horizontal > .bolt {
+		display: none;
+	}
 }

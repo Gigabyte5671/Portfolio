@@ -133,6 +133,7 @@ ul.technologies {
 	justify-content: center;
 	align-content: flex-end;
 	gap: 1px 0.2rem;
+	max-width: 67rem;
 	margin: 9rem 0 0;
 	padding: 0 10rem;
 }
