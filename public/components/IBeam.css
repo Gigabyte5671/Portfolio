@@ -1,0 +1,148 @@
+.ibeam {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: hsl(0, 54%, 20%);
+	background-color: currentColor;
+	box-shadow:
+		0 0 1rem 0rem #000b inset,
+		0 0 2rem -0.5rem #000;
+	pointer-events: none;
+}
+.ibeam.horizontal {
+	flex-flow: row nowrap;
+	width: calc(100% - 5.5rem);
+	height: 5.5rem;
+	border-top: 0.5rem solid hsl(0, 54%, 10%);
+	border-bottom: 0.5rem solid hsl(0, 54%, 10%);
+}
+.ibeam.horizontal.top {
+	top: -2.75rem;
+	box-shadow:
+		0 0 1rem 0rem #000b inset,
+		0 0 2rem -0.5rem #000,
+		0 0.3rem 1px 0 hsl(0, 54%, 4%),
+		0 0.3rem 0.5rem 0 #0006;
+}
+.ibeam.horizontal.bottom {
+	bottom: -2.75rem;
+	box-shadow:
+		0 0 1rem 0rem #000b inset,
+		0 0 2rem -0.5rem #000,
+		0 -0.3rem 1px 0 hsl(0, 54%, 28%),
+		0 -0.3rem 0.5rem 0 #0006;
+}
+.ibeam.vertical {
+	flex-flow: column nowrap;
+	width: 5.5rem;
+	height: 100%;
+	border-left: 0.5rem solid hsl(0, 54%, 10%);
+	border-right: 0.5rem solid hsl(0, 54%, 10%);
+}
+.ibeam.vertical.left {
+	left: -2.75rem;
+	box-shadow:
+		0 0 1rem 0rem #000b inset,
+		0 0 2rem -0.5rem #000,
+		0.3rem 0 1px 0 hsl(0, 54%, 20%),
+		0.3rem 0 0.5rem 0 #0008;
+}
+.ibeam.vertical.right {
+	right: -2.75rem;
+	box-shadow:
+		0 0 1rem 0rem #000b inset,
+		0 0 2rem -0.5rem #000,
+		-0.3rem 0 1px 0 hsl(0, 54%, 20%),
+		-0.3rem 0 0.5rem 0 #0008;
+}
+.ibeam .plate {
+	display: grid;
+	place-items: center;
+	color: inherit;
+	background-color: currentColor;
+	box-shadow: 0 0 0.2rem 0 #0008;
+}
+.ibeam.horizontal .plate {
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 0 1rem;
+	height: 100%;
+	padding: 0 1rem;
+}
+.ibeam.vertical .plate {
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 1rem 0;
+	width: 100%;
+	padding: 1rem 0;
+}
+.ibeam.horizontal .plate.start {
+	box-shadow: 0.15rem 0 0.1rem 0 #000;
+}
+.ibeam.horizontal .plate.end {
+	box-shadow: -0.15rem 0 0.1rem 0 #000;
+}
+.ibeam.vertical .plate.start {
+	box-shadow: 0 0.15rem 0.1rem 0 #000;
+}
+.ibeam.vertical .plate.end {
+	box-shadow: 0 -0.15rem 0.1rem 0 #000;
+}
+.ibeam .bolt {
+	position: relative;
+	display: block;
+	width: 0.8rem;
+	height: 0.7rem;
+	filter: drop-shadow(0 0px 2px #000);
+}
+.ibeam .bolt::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: #4a3333;
+	clip-path: polygon(
+		25% 0%,
+		75% 0%,
+		100% 50%,
+		75% 100%,
+		25% 100%,
+		0% 50%
+	);
+}
+.ibeam.horizontal .plate.start .bolt {
+	filter:
+		drop-shadow(1px 0 0px #000)
+		drop-shadow(1px 0 1px #000);
+}
+.ibeam.horizontal .plate.end .bolt {
+	filter:
+		drop-shadow(-1px 0 0px #000)
+		drop-shadow(-1px 0 1px #000);
+}
+.ibeam.vertical .plate.start .bolt {
+	filter:
+		drop-shadow(0 1px 0px #000)
+		drop-shadow(0 1px 1px #000);
+}
+.ibeam.vertical .plate.end .bolt {
+	filter:
+		drop-shadow(0 -1px 0px #000)
+		drop-shadow(0 -1px 1px #000);
+}
+.ibeam.horizontal .bolt.start {
+	filter:
+		drop-shadow(1px 0 1px #000);
+}
+.ibeam.horizontal .bolt.end {
+	filter:
+		drop-shadow(-1px 0 1px #000);
+}
+.ibeam.vertical .bolt.start {
+	filter:
+		drop-shadow(0 1px 1px #000);
+}
+.ibeam.vertical .bolt.end {
+	filter:
+		drop-shadow(0 -1px 1px #000);
+}
