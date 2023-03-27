@@ -48,7 +48,7 @@
 .cabletrack.vertical .tJoint {
 	position: relative;
 	display: grid;
-	grid-template-columns: 3.2rem 50vw;
+	grid-template-columns: 3.2rem 48vw;
 	grid-template-rows: 4.5rem 3rem 4.5rem;
 	align-items: center;
 	margin-right: -8.6rem;
@@ -178,7 +178,7 @@
 		linear-gradient(0deg, #151515 0.06rem, #252525 0.3rem, #111 0.6rem, transparent 0.6rem),
 		linear-gradient(90deg, #151515 0.06rem, #252525 0.3rem, #111 0.6rem, transparent 0.6rem);
 	background-position:
-		calc(-50vw + 0.5rem) 3.5rem,
+		calc(-48vw + 0.5rem) 3.5rem,
 		center,
 		center;
 	background-repeat: no-repeat;
@@ -193,7 +193,7 @@
 		linear-gradient(0deg, #151515 0.06rem, #252525 0.3rem, #111 0.6rem, transparent 0.6rem),
 		linear-gradient(90deg, #151515 0.06rem, #252525 0.3rem, #111 0.6rem, transparent 0.6rem);
 	background-position:
-		calc(-50vw + 0.5rem) 3.5rem,
+		calc(-48vw + 0.5rem) 3.5rem,
 		center,
 		center;
 	background-repeat: no-repeat;
@@ -208,7 +208,7 @@
 		linear-gradient(0deg, #151515 0.06rem, #252525 0.3rem, #111 0.6rem, transparent 0.6rem),
 		linear-gradient(90deg, #151515 0.06rem, #252525 0.3rem, #111 0.6rem, transparent 0.6rem);
 	background-position:
-		calc(-50vw + 0.5rem) 3.5rem,
+		calc(-48vw + 0.5rem) 3.5rem,
 		center,
 		center;
 	background-repeat: no-repeat;
@@ -223,7 +223,7 @@
 		linear-gradient(0deg, #151515 0.06rem, #252525 0.3rem, #111 0.6rem, transparent 0.6rem),
 		linear-gradient(90deg, #151515 0.06rem, #252525 0.3rem, #111 0.6rem, transparent 0.6rem);
 	background-position:
-		calc(-50vw + 0.5rem) 3.5rem,
+		calc(-48vw + 0.5rem) 3.5rem,
 		center,
 		center;
 	background-repeat: no-repeat;
@@ -238,7 +238,7 @@
 		linear-gradient(0deg, #151515 0.06rem, #252525 0.3rem, #111 0.6rem, transparent 0.6rem),
 		linear-gradient(90deg, #151515 0.06rem, #252525 0.3rem, #111 0.6rem, transparent 0.6rem);
 	background-position:
-		calc(-50vw + 0.5rem) 3.5rem,
+		calc(-48vw + 0.5rem) 3.5rem,
 		center,
 		center;
 	background-repeat: no-repeat;
