@@ -105,6 +105,17 @@ ul.technologies {
 	list-style: none;
 }
 
+.projects {
+	min-height: unset;
+	background: linear-gradient(0deg, #222, #111 0.8rem, transparent calc(0.8rem + 10px));
+}
+.projects::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(0deg, #000, transparent 2rem);
+	pointer-events: none;
+}
 .projects > h2 {
 	margin: 5rem auto calc(-5rem - 1em) 6rem;
 }
