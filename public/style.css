@@ -95,3 +95,33 @@ section > p {
 	mix-blend-mode: overlay;
 }
 
+ul.technologies {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 10rem 3rem;
+	margin: 9rem 0;
+	padding: 0 5rem;
+	list-style: none;
+}
+
+.projects > h2 {
+	margin: 5rem auto calc(-5rem - 1em) 6rem;
+}
+.projects > p {
+	margin: 9.5rem auto calc(-9.5rem - 1em) 6rem;
+}
+.projects > ul {
+	margin: 0;
+	padding: 0;
+}
+
+.crateStack {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: flex-end;
+	gap: 1px 0.2rem;
+	margin: 9rem 0 0;
+	padding: 0 10rem;
+}
