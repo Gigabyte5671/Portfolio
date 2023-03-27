@@ -1,0 +1,341 @@
+.matrix {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 17rem;
+	height: 12rem;
+}
+.matrix.wide {
+	width: 29.5rem;
+	height: 12rem;
+}
+/* .matrix > .pipe {
+	position: relative;
+	isolation: isolate;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 6.5rem;
+	height: 100%;
+}
+.matrix > .pipe > span {
+	position: absolute;
+	display: block;
+}
+.matrix > .pipe > span::before,
+.matrix > .pipe > span::after {
+	content: '';
+	position: absolute;
+	background: linear-gradient(90deg, #332 10%, #553 50%, #221 100%);
+}
+.matrix > .pipe > span:nth-of-type(1) {
+	top: -1rem;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 1.7rem;
+	height: 40%;
+	background: linear-gradient(90deg, #134 10%, #256 50%, #023 100%);
+	border-radius: 1.5rem 1.5rem 0 0;
+}
+.matrix > .pipe > span:nth-of-type(1)::before {
+	z-index: -1;
+	top: -0.2rem;
+	width: calc(100% + 0.4rem);
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+.matrix > .pipe > span:nth-of-type(1)::after {
+	bottom: 0;
+	width: calc(100% + 0.4rem);
+	height: 0.5rem;
+	border-radius: 0.1rem;
+}
+.matrix > .pipe > span:nth-of-type(2) {
+	top: calc(40% - 1.7rem / 2 + 0.3rem);
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% - 2.2rem);
+	height: 1.7rem;
+	background: linear-gradient(180deg, #134 10%, #256 50%, #023 100%);
+}
+.matrix > .pipe > span:nth-of-type(2)::before {
+	left: 0;
+	width: 0.5rem;
+	height: calc(100% + 0.4rem);
+	background: linear-gradient(180deg, #332 10%, #553 50%, #221 100%);
+	border-radius: 0.1rem;
+}
+.matrix > .pipe > span:nth-of-type(2)::after {
+	right: 0;
+	width: 0.5rem;
+	height: calc(100% + 0.4rem);
+	background: linear-gradient(180deg, #332 10%, #553 50%, #221 100%);
+	border-radius: 0.1rem;
+} */
+.matrix > .controller {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 1.5rem;
+	height: 90%;
+	background: #262626;
+	border-radius: 0.5rem 0 0 0.5rem;
+	box-shadow:
+		0 0 1rem 0 #000b inset,
+		0.1rem 0.25rem 0.6rem -0.15rem #000;
+}
+.matrix > .controller::before {
+	content: '';
+	position: absolute;
+	top: 22%;
+	left: -0.25rem;
+	display: block;
+	width: 0.25rem;
+	height: 1.6rem;
+	background-color: #111;
+	border-radius: 0.3rem 0 0 0.3rem;
+}
+.matrix > .controller > span {
+	position: absolute;
+	display: block;
+}
+.matrix > .controller > span:nth-of-type(1) {
+	top: 0.5rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: radial-gradient(circle at center, #888, #111 30%, #111 50%);
+	border-radius: 50%;
+}
+.matrix.active > .controller > span:nth-of-type(1) {
+	animation: matrixBlinkBlue 0.1s linear infinite;
+}
+@keyframes matrixBlinkBlue {
+	0%   {
+		background: radial-gradient(circle at center, #fff, #09f 30%, #111 50%);
+	}
+	100% {
+		background: radial-gradient(circle at center, #888, #111 30%, #111 50%);
+	}
+}
+.matrix > .controller > span:nth-of-type(2) {
+	top: 1.2rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: radial-gradient(circle at center, #fff, #0d6 30%, #111 50%);
+	border-radius: 50%;
+}
+.matrix.active > .controller > span:nth-of-type(2) {
+	animation: matrixBlinkGreen 0.1s 0.03s linear infinite;
+}
+@keyframes matrixBlinkGreen {
+	0%   {
+		background: radial-gradient(circle at center, #fff, #0d6 30%, #111 50%);
+	}
+	100% {
+		background: radial-gradient(circle at center, #888, #111 30%, #111 50%);
+	}
+}
+.matrix > .controller > span:nth-of-type(3) {
+	bottom: 0.5rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: radial-gradient(circle at center, #fff, #f46 30%, #111 50%);
+	border-radius: 50%;
+}
+.matrix > .display {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+}
+.matrix > .display > .marquee {
+	position: absolute;
+	inset: 1rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #111;
+	overflow: hidden;
+}
+.matrix > .display > .marquee > ul {
+	position: absolute;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 7ch;
+	margin: 0;
+	padding: 0 7ch;
+	color: white;
+	font-size: 8rem;
+	font-weight: 100;
+	list-style: none;
+	white-space: nowrap;
+	text-shadow: 0 0 0.5rem red;
+	filter: blur(0.12rem);
+	animation: marquee 50s linear infinite;
+}
+@keyframes marquee {
+	0%   {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+.matrix > .display > .image {
+	position: absolute;
+	inset: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2.5rem 2rem;
+	background-color: #111;
+	overflow: hidden;
+}
+.matrix > .display > .image > img {
+	width: 100%;
+	filter: brightness(1.5) blur(0.12rem);
+}
+.matrix > .display > span {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.matrix > .display > span:nth-of-type(1),
+.matrix > .display > span:nth-of-type(2),
+.matrix > .display > span:nth-of-type(3),
+.matrix > .display > span:nth-of-type(4) {
+	width: 1.5rem;
+	height: 2.5rem;
+	background-color: #060606;
+	box-shadow: 0 0.2rem 0.5rem -0.1rem #000;
+}
+.matrix > .display > span:nth-of-type(1) {
+	bottom: 100%;
+	left: 10%;
+	border-radius: 2rem 2rem 0 0;
+	border-bottom: 0.3rem solid #111;
+}
+.matrix > .display > span:nth-of-type(2) {
+	right: 10%;
+	bottom: 100%;
+	border-radius: 2rem 2rem 0 0;
+	border-bottom: 0.3rem solid #111;
+}
+.matrix > .display > span:nth-of-type(3) {
+	top: 100%;
+	right: 10%;
+	border-radius: 0 0 2rem 2rem;
+	border-top: 0.3rem solid #111;
+}
+.matrix > .display > span:nth-of-type(4) {
+	top: 100%;
+	left: 10%;
+	border-radius: 0 0 2rem 2rem;
+	border-top: 0.3rem solid #111;
+}
+.matrix > .display > span:nth-of-type(1)::after,
+.matrix > .display > span:nth-of-type(2)::after,
+.matrix > .display > span:nth-of-type(3)::after,
+.matrix > .display > span:nth-of-type(4)::after {
+	content: '';
+	position: absolute;
+	width: 0.8rem;
+	height: 0.7rem;
+	background-color: #333;
+	clip-path: polygon(
+		25% 0%,
+		75% 0%,
+		100% 50%,
+		75% 100%,
+		25% 100%,
+		0% 50%
+	);
+}
+.matrix > .display > span:nth-of-type(1)::after,
+.matrix > .display > span:nth-of-type(2)::after {
+	top: 0.5rem;
+}
+.matrix > .display > span:nth-of-type(3)::after,
+.matrix > .display > span:nth-of-type(4)::after {
+	bottom: 0.5rem;
+}
+.matrix > .display > span:nth-of-type(5) {
+	inset: 1rem;
+	background:
+		radial-gradient(circle at 0.25rem 0.25rem, transparent 0.125rem, #000 calc(0.125rem + 1px));
+	background-repeat: repeat;
+	background-size: 0.5rem 0.5rem;
+	pointer-events: none;
+}
+.matrix > .display > span:nth-of-type(6) {
+	inset: 0;
+	color: #0c0c0c;
+	border: 1rem solid currentColor;
+	border-radius: 0.25rem;
+	box-shadow:
+		0 0 1rem 0 #000 inset,
+		0 0.5rem 0.8rem -0.2rem #000;
+	pointer-events: none;
+}
+.matrix > .display > span:nth-of-type(6)::before {
+	content: '';
+	position: absolute;
+	bottom: calc(-1.7rem + 1px);
+	width: 70%;
+	height: 0.7rem;
+	background-color: currentColor;
+	clip-path: polygon(
+		0% 0%,
+		100% 0%,
+		calc(100% - 1rem) 100%,
+		1rem 100%
+	);
+	filter: brightness(0.7);
+}
+.matrix > .display > span:nth-of-type(6)::after {
+	content: '';
+	position: absolute;
+	right: -1px;
+	width: 0.8rem;
+	height: 70%;
+	background-color: currentColor;
+	clip-path: polygon(
+		100% 0%,
+		100% 100%,
+		0% calc(100% - 1rem),
+		0% 1rem
+	);
+}
+.matrix > .label {
+	position: absolute;
+	bottom: -3rem;
+	padding-inline-start: 0.9em;
+	color: white;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-align: center;
+	mix-blend-mode: overlay;
+}
+.matrix > .sublabel {
+	position: absolute;
+	bottom: -4rem;
+	padding-inline-start: 1.5em;
+	color: white;
+	font-size: 0.9rem;
+	font-weight: 700;
+	text-align: center;
+	mix-blend-mode: overlay;
+}
