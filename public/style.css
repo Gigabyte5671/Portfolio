@@ -4,6 +4,11 @@
 @import url('./components/IBeam.css');
 
 :root {
+	/* Colours */
+	--color-bolt: hsl(204 3% 16% / 1);
+	--color-metal-plate: hsl(204 10% 19% / 1);
+	--color-metal-plate-light: hsl(204 10% 34% / 1);
+	--color-metal-plate-dark: hsl(204 10% 11% / 1);
 }
 
 *,
@@ -20,8 +25,71 @@ body {
 	height: 100%;
 	margin: 0;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: white;
+	background:
+		radial-gradient(circle at 50% 58%, var(--color-bolt) 5px, transparent 5px),
+		radial-gradient(circle at 50% 42%, var(--color-bolt) 5px, transparent 5px),
+		url('../src/textures/rust_coarse_01_rough_1k.png'),
+		linear-gradient(
+			180deg,
+			var(--color-metal-plate) calc(50% - 7px),
+			var(--color-metal-plate-dark) calc(50% - 7px),
+			var(--color-metal-plate-dark) 50%,
+			var(--color-metal-plate-light) 50%,
+			var(--color-metal-plate-light) calc(50% + 7px),
+			var(--color-metal-plate) calc(50% + 7px)
+		);
+	background-position: center;
+	background-repeat:
+		repeat,
+		repeat,
+		repeat,
+		repeat;
+	background-size:
+		180px 500px,
+		180px 500px,
+		700px 700px,
+		180px 500px;
+	background-blend-mode:
+		normal,
+		normal,
+		overlay,
+		normal;
 }
 
 main {
 	height: 100%;
 }
+
+section {
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-weight: 700;
+	overflow: hidden;
+}
+
+section > h1 {
+	margin: 0;
+	color: white;
+	font-size: 20rem;
+	line-height: 1em;
+	mix-blend-mode: overlay;
+}
+section > h2 {
+	margin: 0;
+	color: white;
+	font-size: 3.5rem;
+	line-height: 1em;
+	mix-blend-mode: overlay;
+}
+section > p {
+	margin: 0;
+	color: white;
+	font-weight: 700;
+	mix-blend-mode: overlay;
+}
+
