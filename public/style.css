@@ -1,4 +1,5 @@
 @import url('./components/DotMatrixDisplay.css');
+@import url('./components/Gantry.css');
 @import url('./components/IBeam.css');
 
 :root {
