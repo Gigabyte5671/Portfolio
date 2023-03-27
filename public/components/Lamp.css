@@ -1,0 +1,120 @@
+.landing > .lamp {
+	position: absolute;
+	top: 3rem;
+	right: 8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 9rem;
+	height: 9rem;
+}
+.landing > .lamp > .shadow {
+	position: absolute;
+	bottom: 0;
+	width: 300%;
+	height: 150%;
+	color: #000;
+	filter: blur(9px);
+}
+.landing > .lamp > .shadow::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: currentColor;
+	clip-path: polygon(
+		15% 0%,
+		100% 0%,
+		68% 97%,
+		34% 97%
+	);
+	opacity: 0.45;
+}
+.landing > .lamp > .back {
+	position: absolute;
+	right: -10%;
+	bottom: 21%;
+	width: 40%;
+	height: 40%;
+	background-color: var(--color-lamp-base);
+	border-top-right-radius: 30% 50%;
+	transform: rotate(30deg);
+	transform-origin: center;
+	filter: blur(1px);
+}
+.landing > .lamp > .mount {
+	position: absolute;
+	top: 5%;
+	right: -10%;
+	width: 100%;
+	height: 60%;
+	color: var(--color-lamp-base);
+	background-color: #0006;
+	border: 1rem solid currentColor;
+	border-top-width: 1.8rem;
+	border-radius: 0.7rem;
+	filter: blur(0.6px);
+}
+.landing > .lamp > .mount::before {
+	content: '';
+	position: absolute;
+	top: -1.2rem;
+	left: 10%;
+	width: 0.6rem;
+	height: 0.6rem;
+	color:  var(--color-lamp-base-light);
+	background-color: currentColor;
+	border-radius: 50%;
+	box-shadow: 5rem 0 0 currentColor;
+}
+.landing > .lamp > .mount::after {
+	content: '';
+	position: absolute;
+	right: -1rem;
+	bottom: -0.4rem;
+	width: 0.4rem;
+	height: 0.6rem;
+	color:  var(--color-lamp-base-light);
+	background-color: currentColor;
+	border-radius: 50%;
+}
+.landing > .lamp > .bezel {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 65%;
+	background-color: var(--color-lamp-base);
+	border-radius: 1rem;
+	box-shadow: 0.2rem -0.5rem 1px var(--color-lamp-base-light);
+}
+.landing > .lamp > .bulb {
+	position: absolute;
+	bottom: 7%;
+	width: 85%;
+	height: 50%;
+	color: var(--color-lamp-bulb);
+	background-color: currentColor;
+	border-radius: 0.6rem;
+	box-shadow:
+		0 0 15rem currentColor,
+		0 0 15rem currentColor,
+		0 0 15rem currentColor,
+		0 0 5rem currentColor;
+	filter: blur(5px);
+	mix-blend-mode: luminosity;
+}
+.landing > .lamp > .bars {
+	position: absolute;
+	bottom: 0.5%;
+	left: 13%;
+	width: 7%;
+	height: 60%;
+	color: var(--color-lamp-base-light);
+	background-color: currentColor;
+	border-radius: 1rem;
+	box-shadow:
+		2rem 0 0 currentColor,
+		4rem 0 0 currentColor,
+		6rem 0 0 currentColor;
+	filter: blur(2px);
+	opacity: 0.6;
+}
