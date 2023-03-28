@@ -8,7 +8,7 @@
 	filter: drop-shadow(0 0.1rem 0.2rem #0006);
 	pointer-events: none;
 }
-.cabletrack.vertical .segment {
+.cabletrack.vertical > .segment {
 	position: relative;
 	display: flex;
 	flex-flow: row nowrap;
@@ -46,7 +46,7 @@
 	border-right: 0.2rem solid #777;
 	border-left: 0.2rem solid #777;
 }
-.cabletrack.vertical .tJoint {
+.cabletrack.vertical > .tJoint {
 	position: relative;
 	display: grid;
 	grid-template-columns: 3.2rem 48vw;
@@ -54,7 +54,7 @@
 	align-items: center;
 	margin-right: -8.6rem;
 }
-.cabletrack.vertical .tJoint > div:nth-of-type(1) {
+.cabletrack.vertical > .tJoint > div:nth-of-type(1) {
 	position: relative;
 	grid-area: 1 / 1 / 4 / 2;
 	display: flex;
@@ -96,7 +96,7 @@
 		normal;
 	border-left: 0.2rem solid #777;
 }
-.cabletrack.vertical .tJoint > div:nth-of-type(2) {
+.cabletrack.vertical > .tJoint > div:nth-of-type(2) {
 	position: relative;
 	width: 100%;
 	height: 4.3rem;
@@ -105,7 +105,7 @@
 	border-left: 0.2rem solid #777;
 	border-radius: 0 0 0 1rem;
 }
-.cabletrack.vertical .tJoint > div:nth-of-type(3) {
+.cabletrack.vertical > .tJoint > div:nth-of-type(3) {
 	position: relative;
 	display: flex;
 	flex-flow: column nowrap;
@@ -135,7 +135,7 @@
 		normal,
 		normal;
 }
-.cabletrack.vertical .tJoint > div:nth-of-type(4) {
+.cabletrack.vertical > .tJoint > div:nth-of-type(4) {
 	position: relative;
 	width: 100%;
 	height: 4.5rem;
@@ -150,7 +150,7 @@
 	height: 100%;
 	background: linear-gradient(90deg, #151515 10%, #252525 50%, #111 100%);
 }
-.cabletrack.vertical .tJoint .cable {
+.cabletrack.vertical > .tJoint .cable {
 	position: absolute;
 	top: 0;
 	left: 0.2rem;
@@ -159,19 +159,19 @@
 	height: 100%;
 	background: linear-gradient(90deg, #151515 10%, #252525 50%, #111 100%);
 }
-.cabletrack.vertical .tJoint .cable:nth-of-type(2) {
+.cabletrack.vertical > .tJoint .cable:nth-of-type(2) {
 	left: calc(0.2rem + 0.6rem * 1);
 }
-.cabletrack.vertical .tJoint .cable:nth-of-type(3) {
+.cabletrack.vertical > .tJoint .cable:nth-of-type(3) {
 	left: calc(0.2rem + 0.6rem * 2);
 }
-.cabletrack.vertical .tJoint .cable:nth-of-type(4) {
+.cabletrack.vertical > .tJoint .cable:nth-of-type(4) {
 	left: calc(0.2rem + 0.6rem * 3);
 }
-.cabletrack.vertical .tJoint .cable:nth-of-type(5) {
+.cabletrack.vertical > .tJoint .cable:nth-of-type(5) {
 	left: calc(0.2rem + 0.6rem * 4);
 }
-.cabletrack.vertical .tJoint .cable.bend {
+.cabletrack.vertical > .tJoint .cable.bend {
 	width: calc(100% + 0.2rem);
 	height: calc(8rem - 0.6rem * 1);
 	background:
@@ -186,7 +186,7 @@
 	background-size: 100% 100%;
 	border-radius: 0 0 0 3.9rem;
 }
-.cabletrack.vertical .tJoint .cable.bend:nth-of-type(2) {
+.cabletrack.vertical > .tJoint .cable.bend:nth-of-type(2) {
 	width: calc(100% + 0.2rem - 0.6rem * 1);
 	height: calc(8rem - 0.6rem * 2);
 	background:
@@ -201,7 +201,7 @@
 	background-size: 100% 100%;
 	border-radius: 0 0 0 3.3rem;
 }
-.cabletrack.vertical .tJoint .cable.bend:nth-of-type(3) {
+.cabletrack.vertical > .tJoint .cable.bend:nth-of-type(3) {
 	width: calc(100% + 0.2rem - 0.6rem * 2);
 	height: calc(8rem - 0.6rem * 3);
 	background:
@@ -216,7 +216,7 @@
 	background-size: 100% 100%;
 	border-radius: 0 0 0 2.7rem;
 }
-.cabletrack.vertical .tJoint .cable.bend:nth-of-type(4) {
+.cabletrack.vertical > .tJoint .cable.bend:nth-of-type(4) {
 	width: calc(100% + 0.2rem - 0.6rem * 3);
 	height: calc(8rem - 0.6rem * 4);
 	background:
@@ -231,7 +231,7 @@
 	background-size: 100% 100%;
 	border-radius: 0 0 0 2.1rem;
 }
-.cabletrack.vertical .tJoint .cable.bend:nth-of-type(5) {
+.cabletrack.vertical > .tJoint .cable.bend:nth-of-type(5) {
 	width: calc(100% + 0.2rem - 0.6rem * 4);
 	height: calc(8rem - 0.6rem * 5);
 	background:
