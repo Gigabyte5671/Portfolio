@@ -29,6 +29,18 @@
 	opacity: 0.6;
 	pointer-events: none;
 }
+.router > .cubemap {
+	position: absolute;
+	inset: 0;
+	background-image: url('../../src/textures/cubemap.webp');
+	background-position: center;
+	background-repeat: repeat;
+	background-size: contain;
+	border-radius: inherit;
+	filter: blur(5px);
+	opacity: 0.3;
+	mix-blend-mode: overlay;
+}
 .router > .indicators {
 	counter-reset: routerIndicators -1;
 	position: relative;
