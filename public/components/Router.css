@@ -1,8 +1,9 @@
 .router {
 	position: relative;
-	width: 20rem;
 	min-height: 20rem;
 	margin: 4rem 0 10rem;
+	padding: 0 1rem 1rem;
+	font-size: 1rem;
 	box-shadow:
 		0 0.3rem 1.2rem -0.3rem #000a,
 		0 0 30rem -1rem #fff6;
@@ -13,7 +14,7 @@
 	inset: 0;
 	background:
 		radial-gradient(#0003, transparent 70%),
-		linear-gradient(0deg, #fff, #fff);
+		linear-gradient(0deg, #444, #444);
 	border-radius: inherit;
 	box-shadow:
 		0 0 0.5rem -0.1rem #0004 inset,
@@ -49,9 +50,10 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	gap: 3ch;
-	margin: 1.2rem 0 1.5rem 2.5rem;
-	color: black;
+	margin: 1.2rem 0 1.5rem 1.0rem;
+	color: white;
 	font-size: 0.5rem;
+	font-weight: 100;
 }
 .router > .indicators > span {
 	counter-increment: routerIndicators;
@@ -89,32 +91,49 @@
 	background-image: url('https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/power_rounded/default/48px.svg');
 	background-position: center;
 	background-size: contain;
-	transform: translateY(0.2em);
+	filter: invert(1);
+	transform: translateY(0.25em);
 }
 .router > .dipoleAntenna {
 	position: absolute;
-	top: -15%;
+	top: -20%;
 	right: -3rem;
+	isolation: isolate;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: flex-end;
 	width: 3rem;
 	height: 12rem;
-	transform: scale(0.85);
+	transform: scale(0.9);
 	transform-origin: 0% 100%;
 }
 .router > .dipoleAntenna > span {
 	position: relative;
 	display: block;
-	width: 100%;
 }
 .router > .dipoleAntenna > span:nth-of-type(1) {
+	width: 96%;
 	height: 1.4rem;
+	margin-left: 4%;
 	background:
-		linear-gradient(90deg, #fff2, transparent 15%, transparent 85%, #fff2),
+		linear-gradient(90deg, #fff0, transparent 20%, transparent 75%, #fff7),
 		linear-gradient(180deg, #151515 5%, #222 10%, #151515 20%, #333 30%, #111 40%, #444 50%, #111 60%, #333 70%, #111 80%, #222 90%, #111 95%);
+	background-blend-mode:
+		overlay,
+		normal;
 	border-radius: 0.2rem;
+}
+.router > .dipoleAntenna > span:nth-of-type(1)::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 15%;
+	left: -8%;
+	width: 100%;
+	height: 70%;
+	background: linear-gradient(180deg, gold 5%, yellow 50%, goldenrod);
+	filter: brightness(0.7);
 }
 .router > .dipoleAntenna > span:nth-of-type(1)::after {
 	content: '';
@@ -171,12 +190,12 @@
 	justify-content: flex-start;
 	align-items: center;
 	gap: 1.5ch;
-	min-width: 27ch;
-	padding: 1ch 2.5ch;
+	min-width: 25ch;
+	padding: 0.8ch 1.5ch;
 	color: #000;
 	text-align: center;
 	text-decoration: none;
-	background-color: hsl(187, 51%, 91%);
+	background-color: hsl(187, 5%, 91%);
 	border: 0.3rem solid #bbb;
 	border-radius: 0.5rem;
 	box-shadow:
@@ -189,19 +208,19 @@
 	background-color: hsl(187, 91%, 91%);
 }
 .router a.blue {
-	background-color: hsl(187, 10%, 91%);
+	background-color: hsl(187, 5%, 91%);
 }
 .router a.blue:hover {
 	background-color: hsl(187, 91%, 91%);
 }
 .router a.red {
-	background-color: hsl(10, 10%, 91%);
+	background-color: hsl(10, 5%, 91%);
 }
 .router a.red:hover {
 	background-color: hsl(10, 81%, 91%);
 }
 .router a.green {
-	background-color: hsl(94, 10%, 91%);
+	background-color: hsl(94, 5%, 91%);
 }
 .router a.green:hover {
 	background-color: hsl(94, 91%, 91%);
