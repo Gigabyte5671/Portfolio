@@ -1,0 +1,199 @@
+.router {
+	position: relative;
+	width: 20rem;
+	min-height: 20rem;
+	margin: 4rem 0 10rem;
+	box-shadow:
+		0 0.3rem 1.2rem -0.3rem #000a,
+		0 0 30rem -1rem #fff6;
+	border-radius: 2rem;
+}
+.router > .background {
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(#0003, transparent 70%),
+		linear-gradient(0deg, #fff, #fff);
+	border-radius: inherit;
+	box-shadow:
+		0 0 0.5rem -0.1rem #0004 inset,
+		0 0 0.8rem #0006 inset,
+		0 0 2rem 0 #0006 inset;
+}
+.router > .gloss {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(100deg, transparent, #fff2 60%, transparent calc(60% + 2px));
+	border-radius: inherit;
+	mix-blend-mode: soft-light;
+	opacity: 0.6;
+	pointer-events: none;
+}
+.router > .indicators {
+	counter-reset: routerIndicators -1;
+	position: relative;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 3ch;
+	margin: 1.2rem 0 1.5rem 2.5rem;
+	color: black;
+	font-size: 0.5rem;
+}
+.router > .indicators > span {
+	counter-increment: routerIndicators;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0.3em;
+}
+.router > .indicators > span::before {
+	content: '';
+	display: block;
+	width: 0.5em;
+	height: 0.5em;
+	background-color: #000;
+	border-radius: 30%;
+	animation: routerIndicatorBlink 0.1s linear infinite;
+}
+@keyframes routerIndicatorBlink {
+	0%   { background-color: #000; }
+	100% { background-color: #0df; }	
+}
+.router > .indicators > span::after {
+	content: counter(routerIndicators);
+	text-align: center;
+}
+.router > .indicators > span:nth-of-type(1)::before {
+	background-color: #0d4;
+	animation: unset;
+}
+.router > .indicators > span:nth-of-type(1)::after {
+	content: '';
+	width: 1em;
+	height: 1em;
+	background-image: url('https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/power_rounded/default/48px.svg');
+	background-position: center;
+	background-size: contain;
+	transform: translateY(0.2em);
+}
+.router > .dipoleAntenna {
+	position: absolute;
+	top: -15%;
+	right: -3rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: flex-end;
+	width: 3rem;
+	height: 12rem;
+	transform: scale(0.85);
+	transform-origin: 0% 100%;
+}
+.router > .dipoleAntenna > span {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+.router > .dipoleAntenna > span:nth-of-type(1) {
+	height: 1.4rem;
+	background:
+		linear-gradient(90deg, #fff2, transparent 15%, transparent 85%, #fff2),
+		linear-gradient(180deg, #151515 5%, #222 10%, #151515 20%, #333 30%, #111 40%, #444 50%, #111 60%, #333 70%, #111 80%, #222 90%, #111 95%);
+	border-radius: 0.2rem;
+}
+.router > .dipoleAntenna > span:nth-of-type(1)::after {
+	content: '';
+	position: absolute;
+	top: 10%;
+	left: 100%;
+	width: 100%;
+	height: 80%;
+	background:
+		radial-gradient(circle at calc(100% - 0.5rem) 50%, #666 0.1rem, transparent calc(0.1rem + 1px)),
+		linear-gradient(0deg, #222, #222);
+	border-radius: 0 1rem 1rem 0;
+}
+.router > .dipoleAntenna > span:nth-of-type(2) {
+	width: 90%;
+	height: 100%;
+	margin-left: 10%;
+	background:
+		linear-gradient(90deg, #fff1, transparent 50%),
+		linear-gradient(180deg, transparent 1rem, #111 1rem, #222 1.2rem, transparent 1.2rem, transparent 1.6rem, #111 1.6rem, #222 1.8rem, transparent 1.8rem),
+		radial-gradient(circle at 50% calc(100% - 0.75rem), #666, #222 0.15rem, transparent calc(0.15rem + 1px)),
+		linear-gradient(90deg, #222 5%, #333 50%, #111);
+	border-radius: 1rem 1rem 0.2rem 1rem;
+	transform-origin: 50% calc(100% - 0.75rem);
+	transform: rotate(90deg);
+}
+.router > .dipoleAntenna.up > span:nth-of-type(2) {
+	background:
+		linear-gradient(180deg, #fff1, transparent),
+		linear-gradient(180deg, transparent 1rem, #111 1rem, #222 1.2rem, transparent 1.2rem, transparent 1.6rem, #111 1.6rem, #222 1.8rem, transparent 1.8rem),
+		radial-gradient(circle at 50% calc(100% - 0.75rem), #666, #222 0.15rem, transparent calc(0.15rem + 1px)),
+		linear-gradient(90deg, #222 5%, #333 50%, #111);
+	transform: rotate(45deg);
+}
+.router > .dipoleAntenna.down > span:nth-of-type(2) {
+	background:
+		linear-gradient(0deg, #fff1, transparent),
+		linear-gradient(180deg, transparent 1rem, #111 1rem, #222 1.2rem, transparent 1.2rem, transparent 1.6rem, #111 1.6rem, #222 1.8rem, transparent 1.8rem),
+		radial-gradient(circle at 50% calc(100% - 0.75rem), #666, #222 0.15rem, transparent calc(0.15rem + 1px)),
+		linear-gradient(90deg, #222 5%, #333 50%, #111);
+	transform: rotateX(180deg);
+}
+.router > .content {
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+.router a {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1.5ch;
+	min-width: 27ch;
+	padding: 1ch 2.5ch;
+	color: #000;
+	text-align: center;
+	text-decoration: none;
+	background-color: hsl(187, 51%, 91%);
+	border: 0.3rem solid #bbb;
+	border-radius: 0.5rem;
+	box-shadow:
+		0 0 0.8rem -0.1rem #fff inset,
+		0 0.1rem 0.75rem -0.3rem #000,
+		0 0 0 0.1rem #2226;
+	transition: 0.05s ease background-color;
+}
+.router a:hover {
+	background-color: hsl(187, 91%, 91%);
+}
+.router a.blue {
+	background-color: hsl(187, 10%, 91%);
+}
+.router a.blue:hover {
+	background-color: hsl(187, 91%, 91%);
+}
+.router a.red {
+	background-color: hsl(10, 10%, 91%);
+}
+.router a.red:hover {
+	background-color: hsl(10, 81%, 91%);
+}
+.router a.green {
+	background-color: hsl(94, 10%, 91%);
+}
+.router a.green:hover {
+	background-color: hsl(94, 91%, 91%);
+}
+.router a img {
+	width: 1.2em;
+}

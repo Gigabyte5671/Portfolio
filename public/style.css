@@ -4,6 +4,7 @@
 @import url('./components/Gantry.css');
 @import url('./components/IBeam.css');
 @import url('./components/Lamp.css');
+@import url('./components/Router.css');
 
 :root {
 	/* Colours */
