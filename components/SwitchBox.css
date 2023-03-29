@@ -1,0 +1,227 @@
+.switchBox {
+	position: absolute;
+	top: 4rem;
+	left: 4rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 7rem;
+	height: 8rem;
+	background: linear-gradient(0deg, #777, #888);
+	border-radius: 0.3rem;
+	box-shadow: 0 0.2rem 1rem -0.3rem #000;
+}
+@media screen and (max-width: 850px) {
+	.switchBox {
+		display: none;
+	}	
+}
+.switchBox > .panel {
+	isolation: isolate;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1ch;
+	height: 70%;
+	padding: 1ch;
+	background:
+		radial-gradient(circle at 0.5rem 0.5rem, #555 0.1rem, transparent calc(0.1rem + 1px)),
+		radial-gradient(circle at calc(100% - 0.5rem) 0.5rem, #555 0.1rem, transparent calc(0.1rem + 1px)),
+		radial-gradient(circle at calc(100% - 0.5rem) calc(100% - 0.5rem), #555 0.1rem, transparent calc(0.1rem + 1px)),
+		radial-gradient(circle at 0.5rem calc(100% - 0.5rem), #555 0.1rem, transparent calc(0.1rem + 1px)),
+		linear-gradient(180deg, transparent 0.8rem, #8888 0.8rem, #7778 1.2rem, transparent 1.2rem),
+		linear-gradient(180deg, #333, #222);
+	background-position:
+		center,
+		center,
+		center,
+		center,
+		50% 0%,
+		center;
+	background-repeat: no-repeat;
+	background-size:
+		100% 100%,
+		100% 100%,
+		100% 100%,
+		100% 100%,
+		35% 100%,
+		100% 100%;
+	border-radius: 0.3rem;
+	box-shadow: 0 0 0.5rem -0.1rem #000 inset;
+	pointer-events: none;
+}
+.switchBox > .panel > label.switch {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 0.8rem;
+	height: 1.5rem;
+	background-color: #000;
+	border-radius: 0.1rem;
+	box-shadow: 0 0 0.3rem -0.1rem #0008;
+	overflow: hidden;
+}
+.switchBox > .panel > label.switch > input {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	pointer-events: all;
+}
+.switchBox > .panel > label.switch > span {
+	position: absolute;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 50%;
+	background: linear-gradient(180deg, #900 25%, #f00 25%, #f00 40%, #900 40%, #b00 60%, #f00 60%, #f00 75%, #900 75%);
+	border-radius: inherit;
+	filter: brightness(0.8);
+	transform: translateY(0%);
+	transition: 0.2s ease transform;
+	pointer-events: none;
+}
+.switchBox > .panel > label.switch > input:checked + span {
+	transform: translateY(100%);
+}
+.switchBox > .door {
+	position: absolute;
+	inset: 0;
+	display: block;
+	perspective: 80rem;
+	perspective-origin: center;
+	transform-style: preserve-3d;
+	pointer-events: none;
+}
+.switchBox > .door::before,
+.switchBox > .door::after {
+	content: '';
+	position: absolute;
+	left: -0.3rem;
+	display: block;
+	width: 0.3rem;
+	height: 1.2rem;
+	background:
+		linear-gradient(90deg, #000 10%, #444 50%, #111),
+		linear-gradient(180deg, #bbb 50%, #222 50%);
+	background-blend-mode:
+		overlay,
+		normal;
+}
+.switchBox > .door::before {
+	top: 20%;
+}
+.switchBox > .door::after {
+	bottom: 20%;
+}
+.switchBox > .door > * {
+	transform-origin: 0% 50%;
+	transition: 0.4s ease transform;
+}
+.switchBox > .door > input {
+	position: absolute;
+	inset: 0;
+	cursor: pointer;
+	pointer-events: all;
+}
+.switchBox > .door > .front {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.7rem;
+	background: linear-gradient(0deg, #929292, #929292);
+	border: 0.4rem solid #888;
+	border-top-width: 0.7rem;
+	border-bottom-width: 0.7rem;
+	border-radius: 0.3rem;
+	transform: translateZ(1px) rotateY(0deg);
+	pointer-events: none;
+}
+.switchBox > .door > .front::before,
+.switchBox > .door > .front::after {
+	content: '';
+	display: block;
+	border-radius: 0.4rem;
+}
+.switchBox > .door > .front::before {
+	width: 4.2rem;
+	height: 4rem;
+	background:
+		url('/images/electric_bolt_FILL1_wght400_GRAD0_opsz48.svg'),
+		linear-gradient(180deg, #a2a2a2 25%, #444 25%, #303030 75%, #a2a2a2 75%),
+		linear-gradient(0deg, #a2a2a2, #a2a2a2);
+	background-position: center;
+	background-repeat:
+		no-repeat,
+		no-repeat,
+		repeat;
+	background-size:
+		40% 40%,
+		60% 100%,
+		100% 100%;
+	box-shadow:
+		0 0.1rem 0.5rem -0.2rem #0006 inset,
+		0 0.1rem 0.6rem -0.3rem #000a;
+}
+.switchBox > .door > .front::after {
+	width: 1.1rem;
+	height: 0.35rem;
+	background-color: #000;
+}
+.switchBox > .door > .back {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.7rem;
+	background: linear-gradient(0deg, #555, #666);
+	border: 0.3rem solid #888;
+	border-radius: 0.3rem;
+	box-shadow:
+		0 0 0.5rem 0 #0004 inset,
+		0 0 1.5rem -0.3rem #000 inset;
+	transform: translateZ(-1px) rotateY(0deg);
+	pointer-events: none;
+}
+.switchBox > .door > .side {
+	position: absolute;
+	inset: 0;
+	right: -0.1rem;
+	display: block;
+	transform-style: preserve-3d;
+	pointer-events: none;
+}
+.switchBox > .door > .side::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	display: block;
+	width: 0.6rem;
+	height: 100%;
+	background: linear-gradient(0deg, #707070, #8a8a8a);
+	transform: rotateY(90deg);
+	transform-origin: center;
+}
+.switchBox > .door > input:checked {
+	transform: rotateY(-110deg) translateZ(0.4rem);
+}
+.switchBox > .door > input:checked ~ .front {
+	transform: rotateY(-110deg) translateZ(0.6rem);
+}
+.switchBox > .door > input:checked ~ .back {
+	transform: rotateY(-110deg) translateZ(0);
+}
+.switchBox > .door > input:checked ~ .side {
+	transform: rotateY(-110deg) translateZ(0.3rem);
+}
+
