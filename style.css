@@ -1,11 +1,11 @@
-@import url('./components/CableTrack.css');
-@import url('./components/Crate.css');
-@import url('./components/DotMatrixDisplay.css');
-@import url('./components/Gantry.css');
-@import url('./components/HangingBulb.css');
-@import url('./components/IBeam.css');
-@import url('./components/Lamp.css');
-@import url('./components/Router.css');
+@import url('/components/CableTrack.css');
+@import url('/components/Crate.css');
+@import url('/components/DotMatrixDisplay.css');
+@import url('/components/Gantry.css');
+@import url('/components/HangingBulb.css');
+@import url('/components/IBeam.css');
+@import url('/components/Lamp.css');
+@import url('/components/Router.css');
 
 
 /** Root **/
@@ -38,7 +38,7 @@ body {
 	background:
 		radial-gradient(circle at 50% 58%, var(--color-bolt) 5px, transparent 5px),
 		radial-gradient(circle at 50% 42%, var(--color-bolt) 5px, transparent 5px),
-		url('../src/textures/rust_coarse_01_rough_1k.png'),
+		url('/textures/rust_coarse_01_rough_1k.png'),
 		linear-gradient(
 			180deg,
 			var(--color-metal-plate) calc(50% - 7px),
