@@ -6,8 +6,10 @@
 @import url('./components/Lamp.css');
 @import url('./components/Router.css');
 
+
+/** Root **/
+
 :root {
-	/* Colours */
 	--color-bolt: hsl(204 3% 16% / 1);
 	--color-metal-plate: hsl(204 10% 19% / 1);
 	--color-metal-plate-light: hsl(204 10% 34% / 1);
@@ -19,6 +21,9 @@
 *::after {
 	box-sizing: border-box;
 }
+
+
+/** General **/
 
 html {
 	height: 100%;
@@ -74,6 +79,9 @@ section {
 	font-weight: 700;
 	overflow: hidden;
 }
+
+
+/** Specific **/
 
 section > h1 {
 	margin: 0;
@@ -197,6 +205,9 @@ ul.technologies {
 	transform-origin: center;
 	opacity: 0.7;
 }
+
+
+/** Lighting **/
 
 .landing > .lighting {
 	position: absolute;
