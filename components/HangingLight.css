@@ -109,4 +109,5 @@
 	background: radial-gradient(circle at center, #fff, transparent 65%);
 	transform: translateY(50%);
 	opacity: 0.3;
+	pointer-events: none;
 }

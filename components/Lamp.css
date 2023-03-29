@@ -13,6 +13,11 @@
 }
 @media screen and (max-width: 1200px) {
 	.lamp {
+		right: 4rem;
+	}
+}
+@media screen and (max-width: 950px) {
+	.lamp {
 		display: none;
 	}
 }
