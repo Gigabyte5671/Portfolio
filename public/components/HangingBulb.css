@@ -12,12 +12,12 @@
 @media screen and (max-width: 700px) {
 	.hangingBulb {
 		right: 10vw;
-	}	
+	}
 }
 @media screen and (max-width: 400px) {
 	.hangingBulb {
 		right: -0.5rem;
-	}	
+	}
 }
 .hangingBulb > .cable {
 	position: relative;
