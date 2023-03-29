@@ -5,7 +5,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
+	<style>
+		/* Accessibilty-focused styles, in case the main stylesheet doesn't load. */
+		h1 {
+			font-size: 2em;
+		}
+		.visualOnly {
+			display: none;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="index.js" defer></script>
 </head>
 <body>
@@ -14,7 +23,7 @@
 	</header>
 	<main>
 		<section class="landing">
-			<div class="scrollIndicator">
+			<div class="visualOnly scrollIndicator">
 				<span></span>
 				<span></span>
 			</div>
@@ -22,7 +31,7 @@
 			<h1><span>Z</span><span>a</span><span>k</span></h1>
 			<p>Web Design & Development</p>
 
-			<div class="cabletrack vertical top left">
+			<div class="visualOnly cabletrack vertical top left">
 				<div class="segment" style="height: calc(50vh + 9rem);">
 					<span class="cable"></span>
 					<span class="cable"></span>
@@ -49,7 +58,7 @@
 				</div>
 			</div>
 
-			<div class="ibeam horizontal top">
+			<div class="visualOnly ibeam horizontal top">
 				<div class="plate start">
 					<span class="bolt"></span>
 					<span class="bolt"></span>
@@ -74,7 +83,7 @@
 				</div>
 			</div>
 
-			<div class="ibeam vertical left">
+			<div class="visualOnly ibeam vertical left">
 				<div class="plate start">
 					<span class="bolt"></span>
 					<span class="bolt"></span>
@@ -99,7 +108,7 @@
 				</div>
 			</div>
 
-			<div class="ibeam vertical right">
+			<div class="visualOnly ibeam vertical right">
 				<div class="plate start">
 					<span class="bolt"></span>
 					<span class="bolt"></span>
@@ -124,7 +133,7 @@
 				</div>
 			</div>
 
-			<div class="lamp" style="transform: scale(0.8);">
+			<div class="visualOnly lamp" style="transform: scale(0.8);">
 				<div class="shadow"></div>
 				<div class="back"></div>
 				<div class="mount"></div>
@@ -158,14 +167,14 @@
 				</div>
 			</div>
 
-			<span class="lighting">
+			<span class="visualOnly lighting">
 				<span class="shadows"></span>
 				<span class="lights"></span>
 			</span>
 		</section>
 
 		<section>
-			<div class="ibeam vertical left">
+			<div class="visualOnly ibeam vertical left">
 				<div class="plate">
 					<span class="bolt"></span>
 					<span class="bolt"></span>
@@ -190,7 +199,7 @@
 				</div>
 			</div>
 
-			<div class="ibeam vertical right">
+			<div class="visualOnly ibeam vertical right">
 				<div class="plate">
 					<span class="bolt"></span>
 					<span class="bolt"></span>
@@ -217,7 +226,7 @@
 
 			<br>
 
-			<div class="ibeam horizontal" style="position: relative;z-index: 2;">
+			<div class="visualOnly ibeam horizontal" style="position: relative;z-index: 2;">
 				<div class="plate start">
 					<span class="bolt"></span>
 					<span class="bolt"></span>
@@ -248,7 +257,7 @@
 			<h2>Contact</h2>
 			<p>Let's make something amazing!</p>
 
-			<div class="cabletrack vertical top left" style="z-index: 0;">
+			<div class="visualOnly cabletrack vertical top left" style="z-index: 0;">
 				<div class="segment" style="height: calc(20vh + 20rem);">
 					<span class="cable"></span>
 					<span class="cable"></span>
@@ -317,7 +326,7 @@
 		</section>
 
 		<section>
-			<div class="ibeam vertical left">
+			<div class="visualOnly ibeam vertical left">
 				<div class="plate">
 					<span class="bolt"></span>
 					<span class="bolt"></span>
@@ -342,7 +351,7 @@
 				</div>
 			</div>
 
-			<div class="ibeam vertical right">
+			<div class="visualOnly ibeam vertical right">
 				<div class="plate">
 					<span class="bolt"></span>
 					<span class="bolt"></span>
@@ -370,7 +379,7 @@
 			<h2>Technologies</h2>
 			<p>I can utilize at a moment's notice:</p>
 
-			<div class="cabletrack vertical top left">
+			<div class="visualOnly cabletrack vertical top left">
 				<div class="segment" style="height: 15rem;">
 					<span class="cable"></span>
 					<span class="cable"></span>
@@ -556,7 +565,7 @@
 		</section>
 
 		<section class="projects">
-			<div class="ibeam vertical left">
+			<div class="visualOnly ibeam vertical left">
 				<div class="plate">
 					<span class="bolt"></span>
 					<span class="bolt"></span>
@@ -581,7 +590,7 @@
 				</div>
 			</div>
 
-			<div class="ibeam vertical right">
+			<div class="visualOnly ibeam vertical right">
 				<div class="plate">
 					<span class="bolt"></span>
 					<span class="bolt"></span>
@@ -609,7 +618,7 @@
 			<br>
 			<br>
 
-			<div class="ibeam horizontal" style="position: relative;">
+			<div class="visualOnly ibeam horizontal" style="position: relative;">
 				<div class="plate start">
 					<span class="bolt"></span>
 					<span class="bolt"></span>
@@ -637,7 +646,7 @@
 			<h2>Projects</h2>
 			<p>Some of my best works:</p>
 
-			<div class="gantry">
+			<div class="visualOnly gantry">
 				<div class="carriage">
 					<span class="background"></span>
 					<span class="bolt"></span>
@@ -763,7 +772,7 @@
 				</div>
 			</ul>
 
-			<div class="hangingBulb">
+			<div class="visualOnly hangingBulb">
 				<div class="cable"></div>
 				<div class="bulb">
 					<div class="filament"></div>
@@ -771,7 +780,7 @@
 				<div class="light"></div>
 			</div>
 
-			<span class="lighting">
+			<span class="visualOnly lighting">
 				<span class="shadows"></span>
 				<span class="lights"></span>
 			</span>

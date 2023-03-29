@@ -209,6 +209,7 @@ ul.technologies {
 .lighting {
 	position: absolute;
 	inset: 0;
+	display: block;
 	mix-blend-mode: plus-lighter;
 	user-select: none;
 	pointer-events: none;
