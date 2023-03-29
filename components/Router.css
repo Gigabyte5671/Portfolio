@@ -14,7 +14,7 @@
 	inset: 0;
 	background:
 		radial-gradient(#0003, transparent 70%),
-		linear-gradient(0deg, #444, #444);
+		linear-gradient(0deg, #222, #222);
 	border-radius: inherit;
 	box-shadow:
 		0 0 0.5rem -0.1rem #0004 inset,
