@@ -276,9 +276,9 @@ main:has(.switchBox .switch:nth-of-type(2) input:checked) .lamp .bars {
 	opacity: 1;
 }
 
-main:has(.switchBox .switch:nth-of-type(2) input:checked) .hangingBulb .bulb {
+main:has(.switchBox .switch:nth-of-type(2) input:checked) .hangingLight .bulb {
 	filter: unset;
 }
-main:has(.switchBox .switch:nth-of-type(2) input:checked) .hangingBulb .light {
+main:has(.switchBox .switch:nth-of-type(2) input:checked) .hangingLight .light {
 	display: none;
 }
