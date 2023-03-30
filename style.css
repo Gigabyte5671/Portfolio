@@ -39,7 +39,7 @@ body {
 	background:
 		radial-gradient(circle at 50% 58%, var(--color-bolt) 5px, transparent 5px),
 		radial-gradient(circle at 50% 42%, var(--color-bolt) 5px, transparent 5px),
-		url('/textures/rust_coarse_01_rough_1k.png'),
+		url('/textures/rust_coarse_01_rough_1k.webp'),
 		linear-gradient(
 			180deg,
 			var(--color-metal-plate) calc(50% - 7px),
