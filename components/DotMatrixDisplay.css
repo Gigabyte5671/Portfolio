@@ -167,6 +167,10 @@
 	background-color: #111;
 	overflow: hidden;
 }
+.matrix > .display > .marquee > span {
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+}
 .matrix > .display > .marquee > ul {
 	position: absolute;
 	display: flex;
