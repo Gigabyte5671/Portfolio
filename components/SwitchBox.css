@@ -3,7 +3,7 @@
 	top: 4rem;
 	left: 4rem;
 	isolation: isolate;
-	display: flex;
+	display: none;
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
@@ -12,6 +12,11 @@
 	background: linear-gradient(0deg, #777, #888);
 	border-radius: 0.3rem;
 	box-shadow: 0 0.2rem 1rem -0.3rem #000;
+}
+@supports selector(:has(+ *)) {
+	.switchBox {
+		display: flex;
+	}
 }
 @media screen and (max-width: 850px) {
 	.switchBox {
@@ -153,6 +158,10 @@
 .switchBox > .door > input {
 	position: absolute;
 	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
 	cursor: pointer;
 	pointer-events: all;
 }
