@@ -2,6 +2,7 @@
 	position: absolute;
 	top: 4rem;
 	left: 4rem;
+	isolation: isolate;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
@@ -18,6 +19,8 @@
 	}	
 }
 .switchBox > .panel {
+	position: relative;
+	z-index: 1;
 	isolation: isolate;
 	display: flex;
 	flex-flow: row wrap;
@@ -93,6 +96,9 @@
 	cursor: pointer;
 	pointer-events: all;
 }
+.switchBox > .panel > label.switch:has(input:focus-visible) {
+	outline: auto;
+}
 .switchBox > .panel > label.switch > span {
 	position: absolute;
 	top: 0;
@@ -111,6 +117,7 @@
 }
 .switchBox > .door {
 	position: absolute;
+	z-index: 2;
 	inset: 0;
 	display: block;
 	perspective: 80rem;
@@ -148,6 +155,9 @@
 	inset: 0;
 	cursor: pointer;
 	pointer-events: all;
+}
+.switchBox > .door:has(input:focus-visible) {
+	outline: auto;
 }
 .switchBox > .door > .front {
 	position: absolute;
