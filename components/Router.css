@@ -95,6 +95,7 @@
 	height: 12rem;
 	transform: scale(0.9);
 	transform-origin: 0% 100%;
+	filter: drop-shadow(0 3px 5px #0005) brightness(0.8);
 }
 .router > .dipoleAntenna > span {
 	position: relative;
