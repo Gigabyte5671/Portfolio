@@ -188,6 +188,7 @@
 .conveyor .muguffins > span::after {
 	width: 9em;
 	height: 6em;
-	background-color: hsl(240, 3%, 49%);
+	background-color: hsl(190, 40%, 70%);
 	border-radius: 0.2em;
+	box-shadow: 0 0 10px hsla(190, 80%, 70%, 0.6), 0 0 50px hsla(190, 80%, 70%, 0.6);
 }
