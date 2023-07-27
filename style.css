@@ -1,4 +1,5 @@
 @import url('/components/CableTrack.css');
+@import url('/components/Conveyor.css');
 @import url('/components/Crate.css');
 @import url('/components/DotMatrixDisplay.css');
 @import url('/components/Gantry.css');
@@ -260,6 +261,19 @@ ul.technologies {
 .tech > .lighting > .lights {
 	background:
 		radial-gradient(circle at 50% 50%, #fffc, transparent 200%);
+}
+
+.fast > .lighting {
+	opacity: 0.2;
+	mask-image: linear-gradient(180deg, #000 80%, transparent);
+	-webkit-mask-image: linear-gradient(180deg, #000 80%, transparent);
+}
+.fast > .lighting > .shadows {
+	display: none;
+}
+.fast > .lighting > .lights {
+	background:
+		radial-gradient(circle at 50% 50%, #fffc 15%, transparent 50%);
 }
 
 .projects > .lighting {

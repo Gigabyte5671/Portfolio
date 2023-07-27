@@ -1,0 +1,193 @@
+.conveyor {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 100%;
+	margin-top: 20rem;
+	font-size: 1rem;
+	filter: drop-shadow(0 3px 4px #0004);
+}
+
+.conveyor * {
+	box-sizing: content-box;
+}
+
+.conveyor .wheels {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	background: linear-gradient(180deg, transparent 0.7em, #555 0.7em, #555 1em, #8c8c8c 1.2em, #a6a6a6 1.8em, #a6a6a6 2.9em, #555 3em, #555 3.3em, transparent 3.3em);
+}
+
+.conveyor .wheels .wheel {
+	position: relative;
+	filter: drop-shadow(0 3px 3px #0008);
+}
+
+.conveyor .wheels .wheel span {
+	position: relative;
+	display: block;
+	width: 3.5em;
+	height: 3.5em;
+	aspect-ratio: 1;
+	background: radial-gradient(circle at center, white 0.2em, #aaa calc(0.2em + 1px), #999, #ccc, #888, black);
+	border: 0.3em solid black;
+	border-radius: 50%;
+	animation: wheel 0.7s linear infinite;
+}
+
+@keyframes wheel {
+	0%   {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.conveyor .wheels .wheel span::before {
+	content: '';
+	position: absolute;
+	top: 0.5em;
+	left: 1.55em;
+	width: 0.4em;
+	height: 0.4em;
+	aspect-ratio: 1;
+	color: #444;
+	background-color: currentColor;
+	border-radius: 50%;
+	box-shadow:
+		1.1em 1em 0 0 currentColor,
+		-1.1em 1em 0 0 currentColor,
+		0 2.1em 0 0 currentColor;
+}
+
+.conveyor .wheels .hose {
+	position: relative;
+	width: 100%;
+	height: 1.0em;
+	margin: 0 0.4em;
+	background: radial-gradient(80% 220% at 50% -140%, transparent calc(86% - 1px), #222 86%, #444 90%, #111 calc(100% - 1px), transparent);
+	filter: drop-shadow(0 2px 2px #0006);
+}
+
+.conveyor .wheels .hose::before,
+.conveyor .wheels .hose::after {
+	content: '';
+	position: absolute;
+	top: -0.1em;
+	width: 0.55em;
+	height: 0.5em;
+	background-color: #bababa;
+	clip-path: polygon(
+		25% 0,
+		75% 0,
+		100% 50%,
+		75% 100%,
+		25% 100%,
+		0 50%
+	);
+}
+
+.conveyor .wheels .hose::before {
+	left: -0.2em;
+}
+
+.conveyor .wheels .hose::after {
+	right: -0.2em;
+}
+
+.conveyor .belt {
+	position: absolute;
+	width: 100%;
+	height: 120%;
+	background:
+		radial-gradient(circle at 0.25em 50%, #555, #222 2px, #222 0.2em, transparent calc(0.2em + 1px)),
+		linear-gradient(90deg, #222, #222 3.1em, transparent 3.1em),
+		radial-gradient(circle at 0.25em 50%, #555, #222 2px, #222 0.2em, transparent calc(0.2em + 1px)),
+		linear-gradient(90deg, #222, #222 3.1em, transparent 3.1em);
+	background-position:
+		3.05em 0,
+		0 0,
+		3.05em 100%,
+		0 100%;
+	background-repeat:
+		repeat-x,
+		repeat-x,
+		repeat-x,
+		repeat-x;
+	background-size:
+		3.5em 0.5em,
+		3.5em 0.5em,
+		3.5em 0.5em,
+		3.5em 0.5em;
+	animation: belt 0.2s linear infinite;
+}
+
+@keyframes belt {
+	0%   {
+		background-position:
+			3.05em 0,
+			0 0,
+			3.05em 100%,
+			0 100%;
+	}
+	100% {
+		background-position:
+			calc(3.05em + 3.5em) 0,
+			3.5em 0,
+			calc(3.05em - 3.5em) 100%,
+			-3.5em 100%;
+	}
+}
+
+.conveyor .muguffins {
+	position: absolute;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	width: 450em;
+	margin-top: -12.6em;
+	animation: muguffinZoop 25.7s linear infinite;
+}
+
+@keyframes muguffinZoop {
+	0%   {
+		transform: translateX(-50%);
+	}
+	100% {
+		transform: translateX(50%);
+	}
+}
+
+.conveyor .muguffins > span {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: end;
+	gap: 0.3em;
+	padding: 0.3em 0.6em 0.6em;
+	background-color: hsl(240, 1%, 16%);
+	border-radius: 0.4em;
+}
+
+.conveyor .muguffins > span::before,
+.conveyor .muguffins > span::after {
+	content: '';
+	display: block;
+}
+.conveyor .muguffins > span::before {
+	width: 0.6em;
+	height: 0.6em;
+	background-color: red;
+	border-radius: 50%;
+	box-shadow: -1em 0 orange, -2em 0 green, -7em 0 #555, -7.1em 0 #555, -7.2em 0 #555, -7.3em 0 #555, -7.4em 0 #555, -7.5em 0 #555, -7.6em 0 #555, -7.7em 0 #555, -7.8em 0 #555, -7.9em 0 #555, -8.0em 0 #555, -8.1em 0 #555, -8.2em 0 #555, -8.3em 0 #555, -8.4em 0 #555;
+}
+.conveyor .muguffins > span::after {
+	width: 9em;
+	height: 6em;
+	background-color: hsl(240, 3%, 49%);
+	border-radius: 0.2em;
+}
