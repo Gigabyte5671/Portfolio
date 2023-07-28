@@ -84,8 +84,15 @@ section {
 	overflow: hidden;
 }
 
-br {
+.spacer {
 	display: block;
+	height: 1.3em;
+	min-height: 1.3em;
+}
+.spacer.double {
+	display: block;
+	height: 2.6em;
+	min-height: 2.6em;
 }
 
 
