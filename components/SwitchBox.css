@@ -301,3 +301,17 @@ main:has(.switchBox .switch:nth-of-type(2) input:checked) .hangingLight .bulb {
 main:has(.switchBox .switch:nth-of-type(2) input:checked) .hangingLight .light {
 	display: none;
 }
+
+main:has(.switchBox .switch:nth-of-type(3) input:checked) .conveyor > .sign .board .text {
+	color: white;
+	filter: brightness(0.3);
+}
+main:has(.switchBox .switch:nth-of-type(3) input:checked) .conveyor .wheels .wheel span {
+	animation-play-state: paused;
+}
+main:has(.switchBox .switch:nth-of-type(3) input:checked) .conveyor .belt {
+	animation-play-state: paused;
+}
+main:has(.switchBox .switch:nth-of-type(3) input:checked) .conveyor .muguffins {
+	animation-play-state: paused;
+}
