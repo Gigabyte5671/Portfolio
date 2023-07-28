@@ -3,13 +3,127 @@
 	display: grid;
 	place-items: center;
 	width: 100%;
-	margin-top: 20rem;
+	margin-top: 25rem;
 	font-size: 1rem;
 	filter: drop-shadow(0 3px 4px #0004);
 }
 
 .conveyor * {
 	box-sizing: content-box;
+}
+
+.conveyor > .sign {
+	position: absolute;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: -30rem;
+	filter: drop-shadow(0 5px 10px #0003);
+}
+.conveyor > .sign.left {
+	left: 0;
+}
+.conveyor > .sign.right {
+	right: 0;
+	flex-flow: row-reverse nowrap;
+}
+
+@media screen and (max-width: 22.5rem) {
+	.conveyor {
+		margin-top: 16rem;
+	}
+	.conveyor > .sign {
+		display: none;
+	}
+}
+
+.conveyor > .sign .poles {
+	display: block;
+	width: 5rem;
+	height: 3rem;
+	background: linear-gradient(180deg, transparent 10%, #666 10%, #777 calc(10% + 0.15rem), #333 calc(10% + 0.5rem), transparent calc(10% + 0.5rem), transparent calc(90% - 0.5rem), #666 calc(90% - 0.5rem), #777 calc(90% - 0.35rem), #333 90%, transparent 90%);
+	filter: brightness(0.9) contrast(1.35);
+}
+
+@media screen and (max-width: 700px) {
+	.conveyor > .sign .poles {
+		width: 1rem;
+	}
+}
+
+.conveyor > .sign .board {
+	position: relative;
+	display: grid;
+	place-items: center;
+	padding: 0.6em 1.5em 0.9em;
+	background-color: #222;
+	border: 0.3em solid #303030;
+	box-shadow: 0 0 1em #0009 inset;
+}
+.conveyor > .sign.left .board {
+	box-shadow: -1.5em 0 1em -1em #0006, 0 0 1em #0009 inset;
+}
+.conveyor > .sign.right .board {
+	box-shadow: 1.5em 0 1em -1em #0006, 0 0 1em #0009 inset;
+}
+
+.conveyor > .sign .board .text {
+	display: flex;
+	flex-flow: column nowrap;
+	color: hsl(190, 80%, 92%);
+	font-size: small;
+	font-weight: 400;
+	filter: drop-shadow(0 0 0.8em hsl(190, 80%, 70%)) drop-shadow(0 0 1.3em hsl(190, 80%, 70%));
+}
+.conveyor > .sign .board .text span:nth-of-type(1)::after {
+	content: '';
+	display: inline-block;
+	width: 8ch;
+	height: 1.1em;
+	margin-left: 1.5ch;
+	margin-bottom: -0.2em;
+	background-color: currentColor;
+	clip-path: polygon(
+		0 30%,
+		80% 30%,
+		80% 0,
+		100% 50%,
+		80% 100%,
+		80% 70%,
+		0 70%
+	);
+}
+.conveyor > .sign .board .text span:nth-of-type(2) {
+	font-size: large;
+}
+
+.conveyor > .sign .board > span {
+	position: absolute;
+	display: block;
+	width: 0.9em;
+	height: 0.9em;
+	background:
+		radial-gradient(circle at center, #ccc 0.07em, transparent calc(0.07em + 1px)),
+		linear-gradient(#363636, #363636);
+	border-radius: 0.2em;
+	box-shadow: 0 0 0.15em #0005;
+}
+.conveyor > .sign .board > span:nth-of-type(1) {
+	top: -0.5em;
+	left: -0.5em;
+}
+.conveyor > .sign .board > span:nth-of-type(2) {
+	top: -0.5em;
+	right: -0.5em;
+}
+.conveyor > .sign .board > span:nth-of-type(3) {
+	right: -0.5em;
+	bottom: -0.5em;
+}
+.conveyor > .sign .board > span:nth-of-type(4) {
+	bottom: -0.5em;
+	left: -0.5em;
 }
 
 .conveyor .wheels {
@@ -98,6 +212,39 @@
 
 .conveyor .wheels .hose::after {
 	right: -0.2em;
+}
+
+@media screen and (max-width: 90rem) {
+	.conveyor .wheels .wheel:nth-child(3n) {
+		display: none;
+	}
+	.conveyor .wheels .hose:nth-child(3n+1) {
+		display: none;
+	}
+}
+@media screen and (max-width: 57rem) {
+	.conveyor .wheels .wheel:is(:nth-child(5n), :nth-child(7n), :nth-child(11n), :nth-child(13n)) {
+		display: none;
+	}
+	.conveyor .wheels .hose:is(:nth-child(5n+1), :nth-child(7n+1), :nth-child(11n+1), :nth-child(13n+1)) {
+		display: none;
+	}
+}
+@media screen and (max-width: 28rem) {
+	.conveyor .wheels .wheel:is(:nth-child(17n), :nth-child(19n)) {
+		display: none;
+	}
+	.conveyor .wheels .hose:is(:nth-child(17n+1), :nth-child(19n+1)) {
+		display: none;
+	}
+}
+@media screen and (max-width: 16rem) {
+	.conveyor .wheels .wheel:nth-child(23n) {
+		display: none;
+	}
+	.conveyor .wheels .hose:nth-child(23n+1) {
+		display: none;
+	}
 }
 
 .conveyor .belt {
