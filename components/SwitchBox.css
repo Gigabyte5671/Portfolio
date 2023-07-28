@@ -3,7 +3,7 @@
 	top: 4rem;
 	left: 4rem;
 	isolation: isolate;
-	display: none;
+	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
@@ -12,11 +12,6 @@
 	background: linear-gradient(0deg, #777, #888);
 	border-radius: 0.3rem;
 	box-shadow: 0 0.2rem 1rem -0.3rem #000;
-}
-@supports selector(:has(+ *)) {
-	.switchBox {
-		display: flex;
-	}
 }
 @media screen and (max-width: 850px) {
 	.switchBox {
@@ -70,6 +65,21 @@
 	background-color: #000;
 	border-radius: 0.1rem;
 	box-shadow: 0 0 0.3rem -0.1rem #0008;
+	cursor: pointer;
+	pointer-events: all;
+}
+.switchBox > .panel > label.switch::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 50%;
+	background: linear-gradient(180deg, #900 25%, #f00 25%, #f00 40%, #900 40%, #b00 60%, #f00 60%, #f00 75%, #900 75%);
+	border-radius: inherit;
+	filter: brightness(0.8);
+	transform: translateY(0%);
+	transition: 0.2s ease transform;
 }
 .switchBox > .panel > label.switch::after {
 	content: '';
@@ -91,34 +101,8 @@
 .switchBox > .panel > label.switch:nth-of-type(3):after {
 	background-image: url('https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/precision_manufacturing/fill1/48px.svg');
 }
-.switchBox > .panel > label.switch > input {
-	position: absolute;
-	z-index: -1;
-	display: block;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	cursor: pointer;
-	pointer-events: all;
-}
-.switchBox > .panel > label.switch:has(input:focus-visible) {
+.switchBox > .panel > label.switch:focus-visible {
 	outline: auto;
-}
-.switchBox > .panel > label.switch > span {
-	position: absolute;
-	top: 0;
-	display: block;
-	width: 100%;
-	height: 50%;
-	background: linear-gradient(180deg, #900 25%, #f00 25%, #f00 40%, #900 40%, #b00 60%, #f00 60%, #f00 75%, #900 75%);
-	border-radius: inherit;
-	filter: brightness(0.8);
-	transform: translateY(0%);
-	transition: 0.2s ease transform;
-	pointer-events: none;
-}
-.switchBox > .panel > label.switch > input:checked + span {
-	transform: translateY(100%);
 }
 .switchBox > .door {
 	position: absolute;
@@ -270,48 +254,58 @@
 
 /** Interactivity **/
 
-main:has(.switchBox .switch:nth-of-type(1) input:checked) .matrix .controller > span {
+.interactionInput:nth-of-type(1):checked ~ main .switchBox > .panel > label.switch:nth-of-type(1)::before {
+	transform: translateY(100%);
+}
+.interactionInput:nth-of-type(2):checked ~ main .switchBox > .panel > label.switch:nth-of-type(2)::before {
+	transform: translateY(100%);
+}
+.interactionInput:nth-of-type(3):checked ~ main .switchBox > .panel > label.switch:nth-of-type(3)::before {
+	transform: translateY(100%);
+}
+
+.interactionInput:nth-of-type(1):checked ~ main .matrix .controller > span {
 	animation: unset;
 }
-main:has(.switchBox .switch:nth-of-type(1) input:checked) .matrix ul,
-main:has(.switchBox .switch:nth-of-type(1) input:checked) .matrix img {
+.interactionInput:nth-of-type(1):checked ~ main .matrix ul,
+.interactionInput:nth-of-type(1):checked ~ main .matrix img {
 	display: none;
 }
 
-main:has(.switchBox .switch:nth-of-type(2) input:checked) section > .lighting {
+.interactionInput:nth-of-type(2):checked ~ main section > .lighting {
 	display: none;
 }
 
-main:has(.switchBox .switch:nth-of-type(2) input:checked) .lamp .shadow {
+.interactionInput:nth-of-type(2):checked ~ main .lamp .shadow {
 	display: none;
 }
-main:has(.switchBox .switch:nth-of-type(2) input:checked) .lamp .bulb {
+.interactionInput:nth-of-type(2):checked ~ main .lamp .bulb {
 	color: #444;
 	box-shadow: none;
 	filter: unset;
 }
-main:has(.switchBox .switch:nth-of-type(2) input:checked) .lamp .bars {
+.interactionInput:nth-of-type(2):checked ~ main .lamp .bars {
 	filter: unset;
 	opacity: 1;
 }
 
-main:has(.switchBox .switch:nth-of-type(2) input:checked) .hangingLight .bulb {
+.interactionInput:nth-of-type(2):checked ~ main .hangingLight .bulb {
 	filter: unset;
 }
-main:has(.switchBox .switch:nth-of-type(2) input:checked) .hangingLight .light {
+.interactionInput:nth-of-type(2):checked ~ main .hangingLight .light {
 	display: none;
 }
 
-main:has(.switchBox .switch:nth-of-type(3) input:checked) .conveyor > .sign .board .text {
+.interactionInput:nth-of-type(3):checked ~ main .conveyor > .sign .board .text {
 	color: white;
 	filter: brightness(0.3);
 }
-main:has(.switchBox .switch:nth-of-type(3) input:checked) .conveyor .wheels .wheel span {
+.interactionInput:nth-of-type(3):checked ~ main .conveyor .wheels .wheel span {
 	animation-play-state: paused;
 }
-main:has(.switchBox .switch:nth-of-type(3) input:checked) .conveyor .belt {
+.interactionInput:nth-of-type(3):checked ~ main .conveyor .belt {
 	animation-play-state: paused;
 }
-main:has(.switchBox .switch:nth-of-type(3) input:checked) .conveyor .muguffins {
+.interactionInput:nth-of-type(3):checked ~ main .conveyor .muguffins {
 	animation-play-state: paused;
 }
