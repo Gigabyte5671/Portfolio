@@ -100,7 +100,11 @@
 	padding: 2ch;
 	color: black;
 	text-decoration: none;
+	background-color: unset;
 	box-shadow: 0 0 0.5rem 0 #0008 inset;
+}
+.crate > .content:hover {
+	background-color: unset;
 }
 .crate.wide > .content {
 	min-width: 20rem;

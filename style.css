@@ -80,6 +80,7 @@ section {
 	padding: 0;
 	font-weight: 700;
 	background-color: unset;
+	border: unset;
 	border-radius: unset;
 	overflow: hidden;
 }
@@ -95,8 +96,18 @@ section {
 	min-height: 2.6em;
 }
 
+.icon {
+	filter: unset;
+}
+
 
 /** Specific **/
+
+.fallbackOnly {
+	display: none;
+	user-select: none;
+	pointer-events: none;
+}
 
 .interactionInput {
 	position: absolute;

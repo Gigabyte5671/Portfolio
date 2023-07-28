@@ -340,6 +340,7 @@
 .matrix > .sublabel {
 	position: absolute;
 	bottom: -4rem;
+	display: block;
 	padding-inline-start: 1.5em;
 	color: white;
 	font-size: 0.9rem;

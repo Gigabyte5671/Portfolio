@@ -43,6 +43,9 @@
 				color: white;
 				background-color: #202020;
 			}
+			:where(.icon) {
+				filter: invert(1);
+			}
 		}
 		h1 {
 			margin: 0;
@@ -54,22 +57,38 @@
 		a {
 			color: inherit;
 		}
-		section {
+		:where(section) {
 			max-width: 50rem;
 			margin: auto;
 			margin-block: 1rem;
-			padding: 0.5rem 0.7rem;
+			padding: 0.5rem 1rem;
 			background-color: #8892;
+			border: 1px solid #8892;
 			border-radius: 5px;
 		}
-		section.landing > p {
+		:where(section.landing) {
+			border-color: #8ac;
+		}
+		:where(section.contact) {
+			border-color: #ac8;
+		}
+		:where(section.tech) {
+			border-color: #ca8;
+		}
+		:where(section.fast) {
+			border-color: #c8a;
+		}
+		:where(section.projects) {
+			border-color: #a8c;
+		}
+		:where(section.landing > p) {
 			font-weight: bold;
 		}
-		.router .content {
+		:where(.router .content) {
 			display: flex;
 			gap: 1.2em;
 		}
-		.router .content a {
+		:where(.router .content a) {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: center;
@@ -78,6 +97,9 @@
 			padding: 1ch;
 			background-color: #8892;
 			border-radius: 5px;
+		}
+		:where(.router .content a:hover) {
+			background-color: #8894;
 		}
 		:where(section.tech ul, section.projects ul) {
 			display: flex;
@@ -95,24 +117,38 @@
 		}
 		:where(section.projects li) {
 			display: flex;
-			flex-direction: row;
-			gap: 1ch;
-			padding: 1ch 1ch 1ch 0;
-			background-color: #8892;
-			border-radius: 5px;
 		}
 		:where(section.projects li a) {
 			display: grid;
-			grid-template-columns: 1fr auto;
-			grid-template-rows: 1fr auto;
+			grid-template-columns: auto 1fr;
+			grid-template-rows: 2rem 1fr;
 			align-items: center;
-			gap: 1ch;
+			gap: 2ch 1ch;
+			width: 100%;
+			padding: 1ch;
+			text-decoration: none;
+			background-color: #8892;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		:where(section.projects li a:hover) {
+			background-color: #8894;
 		}
 		:where(section.projects li a ul) {
 			grid-area: 2 / 1 / 3 / 3;
+			gap: 1ch;
+		}
+		:where(section.projects li a li) {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 1ch;
 		}
 		:where(.visualOnly) {
 			display: none;
+		}
+		:where(.fallbackOnly) {
+			display: block;
 		}
 	</style>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -288,6 +324,10 @@
 			</span>
 		</section>
 
+		<section class="fallbackOnly">
+			<p><i>If you're reading this, the full style sheet for this page hasn't loaded for some reason... <br> Don't worry! You can still read all of my info below - you just won't get to witness my true CSS wizardry along the way.</i>😉</p>
+		</section>
+
 		<section class="contact">
 			<div class="visualOnly ibeam vertical left">
 				<div class="plate">
@@ -406,19 +446,19 @@
 				<div class="gloss"></div>
 				<div class="content">
 					<a href="https://www.linkedin.com/in/zakmanley/" target="_blank" title="LinkedIn Profile">
-						<img src="https://cdn.simpleicons.org/linkedin/black" alt="TypeScript" width="20">
+						<img src="https://cdn.simpleicons.org/linkedin/black" class="icon" alt="TypeScript" width="20">
 						LinkedIn
 					</a>
 					<a href="mailto:contact@zakweb.dev" target="_blank" title="Email Address">
-						<img src="https://cdn.simpleicons.org/gmail/black" alt="TypeScript" width="20">
+						<img src="https://cdn.simpleicons.org/gmail/black" class="icon" alt="TypeScript" width="20">
 						contact@zakweb.dev
 					</a>
 					<a href="https://github.com/Gigabyte5671" target="_blank" title="GitHub Profile">
-						<img src="https://cdn.simpleicons.org/github/black" alt="TypeScript" width="20">
+						<img src="https://cdn.simpleicons.org/github/black" class="icon" alt="TypeScript" width="20">
 						GitHub
 					</a>
 					<a href="https://discordapp.com/users/210305632266485760" target="_blank" title="Discord Handle">
-						<img src="https://cdn.simpleicons.org/discord/black" alt="TypeScript" width="20">
+						<img src="https://cdn.simpleicons.org/discord/black" class="icon" alt="TypeScript" width="20">
 						Gigabyte#3310
 					</a>
 				</div>
@@ -558,7 +598,7 @@
 						<span></span>
 					</div>
 					<span class="label">CSS</span>
-					<span class="sublabel">(This whole website is just CSS 😉)</span>
+					<span class="sublabel visualOnly">(This whole website is just CSS 😉)</span>
 				</li>
 	
 				<li class="matrix">
@@ -768,6 +808,7 @@
 
 			<h2 style="z-index: 3;">I'm Fast</h2>
 			<p style="z-index: 3;">I built this site in just 7 days.</p>
+			<p class="fallbackOnly"><i>Whoosh!</i></p>
 
 			<div class="visualOnly conveyor" style="z-index: 1;">
 				<div class="sign left">
@@ -946,10 +987,10 @@
 						<img src="https://github.com/vircadia/vircadia-web/raw/master/public/assets/vircadia-icon.svg" alt="" width="30">
 						<h3>Vircadia Web</h3>
 						<ul class="stamps">
-							<li><img src="https://cdn.simpleicons.org/githubactions/black" alt="GitHub Actions" title="GitHub Actions" style="width: 1rem;"></li>
-							<li><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Babylon_logo_v4.svg" alt="BabylonJS Engine" title="BabylonJS Engine" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/vue.js/black" alt="Vue Framework" title="Vue Framework" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" style="width: 1rem;"></li>
+							<li><img src="https://cdn.simpleicons.org/githubactions/black" alt="GitHub Actions" title="GitHub Actions" class="icon" style="width: 1rem;"><span class="fallbackOnly">GitHub Actions</span></li>
+							<li><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Babylon_logo_v4.svg" alt="BabylonJS Engine" title="BabylonJS Engine" style="width: 1rem;"><span class="fallbackOnly">Babylon JS</span></li>
+							<li><img src="https://cdn.simpleicons.org/vue.js/black" alt="Vue Framework" title="Vue Framework" class="icon" style="width: 1rem;"><span class="fallbackOnly">Vue</span></li>
+							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">TypeScript</span></li>
 						</ul>
 					</a>
 					<span></span>
@@ -962,9 +1003,9 @@
 						<img src="https://github.com/wilderzone/ta-network-api/raw/main/logo.svg" alt="" width="30">
 						<h3>TA Network API</h3>
 						<ul class="stamps">
-							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/express/black" alt="Express JS" title="Express JS" style="width: 1rem;"></li>
+							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" class="icon" style="width: 1rem;"><span class="fallbackOnly">Node Package Manager</span></li>
+							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">TypeScript</span></li>
+							<li><img src="https://cdn.simpleicons.org/express/black" alt="Express JS" title="Express JS" class="icon" style="width: 1rem;"><span class="fallbackOnly">Express</span></li>
 						</ul>
 					</a>
 					<span></span>
@@ -977,10 +1018,10 @@
 						<img src="https://github.com/Gigabyte5671/CSS-Editor/raw/main/src/assets/branding/logo.svg" alt="" width="30">
 						<h3>CSS Editor</h3>
 						<ul class="stamps">
-							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/githubactions/black" alt="GitHub Actions" title="GitHub Actions" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/vue.js/black" alt="Vue Framework" title="Vue Framework" style="width: 1rem;"></li>
+							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" class="icon" style="width: 1rem;"><span class="fallbackOnly">Node Package Manager</span></li>
+							<li><img src="https://cdn.simpleicons.org/githubactions/black" alt="GitHub Actions" title="GitHub Actions" class="icon" style="width: 1rem;"><span class="fallbackOnly">GitHub Actions</span></li>
+							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">TypeScript</span></li>
+							<li><img src="https://cdn.simpleicons.org/vue.js/black" alt="Vue Framework" title="Vue Framework" class="icon" style="width: 1rem;"><span class="fallbackOnly">Vue</span></li>
 						</ul>
 					</a>
 					<span></span>
@@ -993,10 +1034,10 @@
 						<img src="https://github.com/Gigabyte5671/CSS-Canvas/blob/main/src/assets/logo-small.webp?raw=true" alt="" width="30">
 						<h3>CSS Canvas</h3>
 						<ul class="stamps">
-							<li><img src="https://cdn.simpleicons.org/firebase/black" alt="Firebase" title="Firebase" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/githubactions/black" alt="GitHub Actions" title="GitHub Actions" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/vue.js/black" alt="Vue Framework" title="Vue Framework" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" style="width: 1rem;"></li>
+							<li><img src="https://cdn.simpleicons.org/firebase/black" alt="Firebase" title="Firebase" class="icon" style="width: 1rem;"><span class="fallbackOnly">Firebase</span></li>
+							<li><img src="https://cdn.simpleicons.org/githubactions/black" alt="GitHub Actions" title="GitHub Actions" class="icon" style="width: 1rem;"><span class="fallbackOnly">GitHub Actions</span></li>
+							<li><img src="https://cdn.simpleicons.org/vue.js/black" alt="Vue Framework" title="Vue Framework" class="icon" style="width: 1rem;"><span class="fallbackOnly">Vue</span></li>
+							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">TypeScript</span></li>
 						</ul>
 					</a>
 					<span></span>
@@ -1009,8 +1050,8 @@
 						<img src="https://github.com/Gigabyte5671/micro-test-runner/raw/main/logo.svg" alt="" width="30">
 						<h3>Micro Test-Runner</h3>
 						<ul class="stamps">
-							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" style="width: 1rem;"></li>
+							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">TypeScript</span></li>
+							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" class="icon" style="width: 1rem;"><span class="fallbackOnly">Node Package Manager</span></li>
 						</ul>
 					</a>
 					<span></span>
@@ -1023,7 +1064,7 @@
 						<img src="https://github.com/Gigabyte5671/DOM-Particles/blob/main/favicon.webp?raw=true" alt="" width="30">
 						<h3>DOM Particles</h3>
 						<ul class="stamps">
-							<li><img src="https://cdn.simpleicons.org/javascript/black" alt="JavaScript" title="JavaScript" style="width: 1rem;"></li>
+							<li><img src="https://cdn.simpleicons.org/javascript/black" alt="JavaScript" title="JavaScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">JavaScript</span></li>
 						</ul>
 					</a>
 					<span></span>
@@ -1035,8 +1076,8 @@
 					<a class="content" href="https://github.com/Gigabyte5671?tab=repositories" target="_blank">
 						<h3>Many more...</h3>
 						<ul class="stamps">
-							<li><img src="https://cdn.simpleicons.org/github/black" alt="GitHub" title="GitHub" style="width: 1rem;"></li>
-							<li><img src="https://cdn.simpleicons.org/python/black" alt="Python" title="Python" style="width: 1rem;"></li>
+							<li><img src="https://cdn.simpleicons.org/github/black" alt="GitHub" title="GitHub" class="icon" style="width: 1rem;"><span class="fallbackOnly">GitHub</span></li>
+							<li><img src="https://cdn.simpleicons.org/python/black" alt="Python" title="Python" class="icon" style="width: 1rem;"><span class="fallbackOnly">Python</span></li>
 						</ul>
 					</a>
 					<span></span>
