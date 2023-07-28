@@ -1,13 +1,13 @@
 .hangingLight {
 	position: absolute;
-	top: 8.1rem;
+	top: 5.5rem;
 	right: 20vw;
 	isolation: isolate;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: center;
-	height: calc(40% - 8.1rem);
+	height: calc(40% - 5.5rem);
 }
 @media screen and (max-width: 700px) {
 	.hangingLight {

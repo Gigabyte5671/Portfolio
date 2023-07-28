@@ -4,8 +4,12 @@
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
+	gap: 0;
 	width: 17rem;
 	height: 12rem;
+	padding: 0;
+	background: unset;
+	border-radius: unset;
 }
 .matrix.wide {
 	width: clamp(17rem, calc(90vw - 3rem), 40rem);
