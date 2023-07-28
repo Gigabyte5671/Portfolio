@@ -200,6 +200,7 @@ ul.technologies {
 
 .lighting {
 	position: absolute;
+	z-index: 10;
 	inset: 0;
 	display: block;
 	mix-blend-mode: plus-lighter;
