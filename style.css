@@ -147,6 +147,10 @@ section > p {
 	mix-blend-mode: overlay;
 }
 
+.landingTagline {
+	font-size: larger;
+}
+
 .landing > .matrix {
 	margin-top: 10vh;
 }
