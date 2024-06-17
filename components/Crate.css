@@ -107,6 +107,9 @@
 	background-color: unset;
 }
 .crate.wide > .content {
+	min-width: 15rem;
+}
+.crate.wider > .content {
 	min-width: 20rem;
 }
 .crate > .content > * {
@@ -120,6 +123,31 @@
 	margin: 0;
 	font-weight: 700;
 	line-height: 1em;
+}
+.crate > .content > .label {
+	position: absolute;
+	top: 0.5ch;
+	left: 0.5ch;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0.1ch;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	filter: grayscale(1) invert(1);
+	opacity: 0.9;
+}
+.crate > .content > .label li {
+	margin: 0;
+	padding: 0 0.7ch 0.4ch;
+	color: white;
+	font-size: small;
+	font-weight: 100;
+	background-color: #000e;
+	border-radius: 2px;
 }
 .crate > .content > .stamps {
 	position: absolute;
@@ -144,7 +172,7 @@
 	justify-content: center;
 	align-content: flex-end;
 	gap: 1px 0.2rem;
-	max-width: 61rem;
+	max-width: 62rem;
 	margin: 19rem 0 0;
 	padding: 0 10rem;
 }

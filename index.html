@@ -120,11 +120,11 @@
 		:where(section.projects li a) {
 			display: grid;
 			grid-template-columns: auto 1fr;
-			grid-template-rows: 2rem 1fr;
+			grid-template-rows: 2rem auto auto;
 			align-items: center;
 			gap: 2ch 1ch;
 			width: 100%;
-			padding: 1ch;
+			padding: 1ch 1ch 2ch;
 			text-decoration: none;
 			background-color: #8892;
 			border-radius: 5px;
@@ -134,10 +134,21 @@
 			background-color: #8894;
 		}
 		:where(section.projects li a ul) {
+			grid-area: 3 / 1 / 4 / 3;
+			gap: 1ch;
+		}
+		:where(section.projects li a ul.label) {
 			grid-area: 2 / 1 / 3 / 3;
 			gap: 1ch;
 		}
 		:where(section.projects li a li) {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 1ch;
+		}
+		:where(section.projects label li) {
+			position: relative;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -979,17 +990,43 @@
 			</div>
 
 			<ul class="crateStack">
-				<li class="crate separate">
+				<li class="crate wider separate">
 					<span></span>
 					<span></span>
-					<a class="content" href="https://github.com/vircadia/vircadia-web" target="_blank">
-						<img src="https://raw.githubusercontent.com/vircadia/vircadia-assets/master/images/branding/vircadia-icon.svg" alt="" width="30">
-						<h3>Vircadia Web</h3>
+					<a class="content" href="https://cascades.app/" target="_blank">
+						<img src="images/logo-2-small.webp" alt="" width="30">
+						<h3>Cascades</h3>
+						<ul class="label">
+							<li>Webapp</li>
+							<li>Branding</li>
+							<li>Framework</li>
+							<li>Backend</li>
+						</ul>
 						<ul class="stamps">
+							<li><img src="https://cdn.simpleicons.org/firebase/black" alt="Firebase" title="Firebase" class="icon" style="width: 1rem;"><span class="fallbackOnly">Firebase</span></li>
+							<li><img src="https://cdn.simpleicons.org/googlecloud/black" alt="Google Cloud Functions" title="Google Cloud Functions" class="icon" style="width: 1rem;"><span class="fallbackOnly">Cloud Functions</span></li>
 							<li><img src="https://cdn.simpleicons.org/githubactions/black" alt="GitHub Actions" title="GitHub Actions" class="icon" style="width: 1rem;"><span class="fallbackOnly">GitHub Actions</span></li>
-							<li><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Babylon_logo_v4.svg" alt="BabylonJS Engine" title="BabylonJS Engine" style="width: 1rem;"><span class="fallbackOnly">Babylon JS</span></li>
 							<li><img src="https://cdn.simpleicons.org/vue.js/black" alt="Vue Framework" title="Vue Framework" class="icon" style="width: 1rem;"><span class="fallbackOnly">Vue</span></li>
 							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">TypeScript</span></li>
+						</ul>
+					</a>
+					<span></span>
+					<span></span>
+				</li>
+				<li class="crate wide">
+					<span></span>
+					<span></span>
+					<a class="content" href="https://cosmicfloss.co.nz/" target="_blank">
+						<img src="images/cosmic-floss.png" alt="" width="30">
+						<h3>Cosmic Floss</h3>
+						<ul class="label">
+							<li>Website</li>
+							<li>Branding</li>
+						</ul>
+						<ul class="stamps">
+							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" class="icon" style="width: 1rem;"><span class="fallbackOnly">Node Package Manager</span></li>
+							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">TypeScript</span></li>
+							<li><img src="https://cdn.simpleicons.org/node.js/black" alt="Node" title="Node" class="icon" style="width: 1rem;"><span class="fallbackOnly">Node</span></li>
 						</ul>
 					</a>
 					<span></span>
@@ -1001,6 +1038,9 @@
 					<a class="content" href="https://www.npmjs.com/package/ta-client-api/" target="_blank">
 						<img src="https://github.com/wilderzone/ta-client-api/raw/main/logo.svg" alt="" width="30">
 						<h3>TA CLient API</h3>
+						<ul class="label">
+							<li>Library</li>
+						</ul>
 						<ul class="stamps">
 							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" class="icon" style="width: 1rem;"><span class="fallbackOnly">Node Package Manager</span></li>
 							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">TypeScript</span></li>
@@ -1016,6 +1056,9 @@
 					<a class="content" href="https://www.npmjs.com/package/@css-canvas/editor" target="_blank">
 						<img src="https://github.com/Cascades-CSS/CSS-Editor/raw/main/src/assets/branding/logo.svg" alt="" width="30">
 						<h3>CSS Editor</h3>
+						<ul class="label">
+							<li>Library</li>
+						</ul>
 						<ul class="stamps">
 							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" class="icon" style="width: 1rem;"><span class="fallbackOnly">Node Package Manager</span></li>
 							<li><img src="https://cdn.simpleicons.org/githubactions/black" alt="GitHub Actions" title="GitHub Actions" class="icon" style="width: 1rem;"><span class="fallbackOnly">GitHub Actions</span></li>
@@ -1032,6 +1075,9 @@
 					<a class="content" href="https://autotype.zakweb.dev/" target="_blank">
 						<img src="https://autotype.zakweb.dev/favicon.svg" alt="" width="30">
 						<h3>AutoType</h3>
+						<ul class="label">
+							<li>Library</li>
+						</ul>
 						<ul class="stamps">
 							<li><img src="https://cdn.simpleicons.org/javascript/black" alt="JavaScript" title="JavaScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">JavaScript</span></li>
 						</ul>
@@ -1045,6 +1091,9 @@
 					<a class="content" href="https://www.npmjs.com/package/css-to-html" target="_blank">
 						<img src="https://github.com/Cascades-CSS/CSS-to-HTML/raw/main/assets/logo.svg" alt="" width="30">
 						<h3>CSS to HTML</h3>
+						<ul class="label">
+							<li>Library</li>
+						</ul>
 						<ul class="stamps">
 							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" class="icon" style="width: 1rem;"><span class="fallbackOnly">Node Package Manager</span></li>
 							<li><img src="https://cdn.simpleicons.org/githubactions/black" alt="GitHub Actions" title="GitHub Actions" class="icon" style="width: 1rem;"><span class="fallbackOnly">GitHub Actions</span></li>
@@ -1055,12 +1104,15 @@
 					<span></span>
 					<span></span>
 				</li>
-				<li class="crate wide">
+				<li class="crate">
 					<span></span>
 					<span></span>
 					<a class="content" href="https://www.npmjs.com/package/ta-network-api/v/2.0.0-alpha.2" target="_blank">
 						<img src="https://github.com/wilderzone/ta-network-api/raw/main/logo.svg" alt="" width="30">
 						<h3>TA Network API</h3>
+						<ul class="label">
+							<li>Library</li>
+						</ul>
 						<ul class="stamps">
 							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" class="icon" style="width: 1rem;"><span class="fallbackOnly">Node Package Manager</span></li>
 							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">TypeScript</span></li>
@@ -1070,16 +1122,18 @@
 					<span></span>
 					<span></span>
 				</li>
-				<li class="crate wide">
+				<li class="crate wider">
 					<span></span>
 					<span></span>
-					<a class="content" href="https://cascades.app/" target="_blank">
-						<img src="images/logo-2-small.webp" alt="" width="30">
-						<h3>Cascades</h3>
+					<a class="content" href="https://github.com/vircadia/vircadia-web" target="_blank">
+						<img src="https://raw.githubusercontent.com/vircadia/vircadia-assets/master/images/branding/vircadia-icon.svg" alt="" width="30">
+						<h3>Vircadia Web</h3>
+						<ul class="label">
+							<li>Webapp</li>
+						</ul>
 						<ul class="stamps">
-							<li><img src="https://cdn.simpleicons.org/firebase/black" alt="Firebase" title="Firebase" class="icon" style="width: 1rem;"><span class="fallbackOnly">Firebase</span></li>
-							<li><img src="https://cdn.simpleicons.org/googlecloud/black" alt="Google Cloud Functions" title="Google Cloud Functions" class="icon" style="width: 1rem;"><span class="fallbackOnly">Cloud Functions</span></li>
 							<li><img src="https://cdn.simpleicons.org/githubactions/black" alt="GitHub Actions" title="GitHub Actions" class="icon" style="width: 1rem;"><span class="fallbackOnly">GitHub Actions</span></li>
+							<li><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Babylon_logo_v4.svg" alt="BabylonJS Engine" title="BabylonJS Engine" style="width: 1rem;"><span class="fallbackOnly">Babylon JS</span></li>
 							<li><img src="https://cdn.simpleicons.org/vue.js/black" alt="Vue Framework" title="Vue Framework" class="icon" style="width: 1rem;"><span class="fallbackOnly">Vue</span></li>
 							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">TypeScript</span></li>
 						</ul>
@@ -1093,6 +1147,9 @@
 					<a class="content" href="https://www.npmjs.com/package/micro-test-runner" target="_blank">
 						<img src="https://github.com/Gigabyte5671/micro-test-runner/raw/main/logo.svg" alt="" width="30">
 						<h3>Micro Test-Runner</h3>
+						<ul class="label">
+							<li>Library</li>
+						</ul>
 						<ul class="stamps">
 							<li><img src="https://cdn.simpleicons.org/typescript/black" alt="TypeScript" title="TypeScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">TypeScript</span></li>
 							<li><img src="https://cdn.simpleicons.org/npm/black" alt="Node Package Manager" title="Node Package Manager" class="icon" style="width: 1rem;"><span class="fallbackOnly">Node Package Manager</span></li>
@@ -1107,6 +1164,9 @@
 					<a class="content" href="https://dom-particles.zakweb.dev/" target="_blank">
 						<img src="https://github.com/Gigabyte5671/DOM-Particles/blob/main/favicon.webp?raw=true" alt="" width="30">
 						<h3>DOM Particles</h3>
+						<ul class="label">
+							<li>Library</li>
+						</ul>
 						<ul class="stamps">
 							<li><img src="https://cdn.simpleicons.org/javascript/black" alt="JavaScript" title="JavaScript" class="icon" style="width: 1rem;"><span class="fallbackOnly">JavaScript</span></li>
 						</ul>
@@ -1114,7 +1174,7 @@
 					<span></span>
 					<span></span>
 				</li>
-				<li class="crate wide">
+				<li class="crate wider">
 					<span></span>
 					<span></span>
 					<a class="content" href="https://github.com/Gigabyte5671?tab=repositories" target="_blank">
